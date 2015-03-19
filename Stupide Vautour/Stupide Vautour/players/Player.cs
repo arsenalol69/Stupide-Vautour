@@ -28,9 +28,9 @@ namespace Stupide_Vautour.players
             set { score = value; }
         }
 
-        protected void addScore(int scoreToAdd){
+        public void addScore(int scoreToAdd){
             score += scoreToAdd;
         }
-        protected abstract Card play(Card animal);
+        public abstract Card play(Card animal);
     }
 }
