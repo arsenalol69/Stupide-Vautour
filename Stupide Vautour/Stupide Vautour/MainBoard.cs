@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Stupide_Vautour
 {
-    public partial class Form1 : Form
+    public partial class MainBoard : Form
     {
-        public Form1()
+        public MainBoard()
         {
             InitializeComponent();
             Console.WriteLine("Coucou bienvenue l'équipe de ouf!");

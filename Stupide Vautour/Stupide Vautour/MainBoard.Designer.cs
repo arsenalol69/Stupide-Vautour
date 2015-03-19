@@ -1,6 +1,6 @@
 ﻿namespace Stupide_Vautour
 {
-    partial class Form1
+    partial class MainBoard
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
