@@ -14,12 +14,22 @@ namespace Stupide_Vautour.game
         int type;
         int force;
 
+
         public Card(int type, int force)
         {
             this.type = type;
             this.force = force;
         }
 
+        public int Force
+        {
+            get { return force; }
+        }
+
+        public int Type
+        {
+            get { return type; }
+        }
 
     }
 }

@@ -14,13 +14,15 @@ namespace Stupide_Vautour.game
         ArrayList cardStack;
         static Random random;
 
-        public Stack()
+        public Stack(Boolean isPlayer)
         {
             cardStack = new ArrayList(NB_CARD);
+            initializeStack(isPlayer);
         }
 
         public void initializeStack(Boolean isPlayer)
         {
+            cardStack.Clear();
             if (isPlayer)
             {
                 for (int i=0; i<NB_CARD; i++)
