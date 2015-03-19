@@ -8,5 +8,18 @@ namespace Stupide_Vautour.game
 {
     class Card
     {
+        public static int ANIMAL = 1;
+        public static int PLAYER = 2;
+
+        int type;
+        int force;
+
+        public Card(int type, int force)
+        {
+            this.type = type;
+            this.force = force;
+        }
+
+
     }
 }
