@@ -11,12 +11,12 @@ namespace Stupide_Vautour.game
     {
         public const int NB_CARD = 15;
 
-        ArrayList cardStack;
+        List<Card> cardStack;
         static Random random;
 
         public Stack(Boolean isPlayer)
         {
-            cardStack = new ArrayList(NB_CARD);
+            cardStack = new List<Card>(NB_CARD);
             initializeStack(isPlayer);
         }
 
@@ -45,6 +45,11 @@ namespace Stupide_Vautour.game
             Card c = (Card)cardStack[indice];
             cardStack.RemoveAt(indice);
             return c;
+        }
+
+        public List<Card> getCards()
+        {
+            return cardStack;
         }
 
 
