@@ -15,6 +15,7 @@ namespace Stupide_Vautour
         public Form1()
         {
             InitializeComponent();
+            Console.WriteLine("Coucou bienvenue");
         }
     }
 }
