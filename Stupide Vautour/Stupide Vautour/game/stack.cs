@@ -14,9 +14,9 @@ namespace Stupide_Vautour.game
         ArrayList cardStack;
         static Random random;
 
-        public Stack(int nbCard)
+        public Stack()
         {
-            cardStack = new ArrayList(nbCard);
+            cardStack = new ArrayList(NB_CARD);
         }
 
         public void initializeStack(Boolean isPlayer)
