@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Stupide_Vautour.game;
+using Stupide_Vautour.players;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,10 +16,15 @@ namespace Stupide_Vautour
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new MainBoard());
+            //Application.Run(new MainBoard());
+            Player p1 = new Stupid();
+            Card c = p1.play();
+            Console.WriteLine("hello");
+            Console.WriteLine(c.toString());
+            Console.ReadLine();
         }
     }
 }

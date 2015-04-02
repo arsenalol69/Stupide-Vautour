@@ -7,20 +7,22 @@ using System.Threading.Tasks;
 
 namespace Stupide_Vautour.players
 {
-    class Human : Player
+    public class Human : Player
     {
          public Human() :  base() 
         {
             
         }
 
-         public override Card play(Card animal)
+         public override Card play()
          {
              //Afficher cartes
              int cardToPlay;
              Console.WriteLine("Which card do you want to play ?");
-             cardToPlay = int.Parse(Console.In.ReadLine());
-             return myCards.getCards()[cardToPlay];
+             String txt = " ";
+             txt = Console.In.ReadLine();
+             cardToPlay = Convert.ToInt32(txt);
+             return myCards.getCards()[cardToPlay-1];
          } 
     }
    
