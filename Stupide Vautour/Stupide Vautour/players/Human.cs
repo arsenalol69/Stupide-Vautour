@@ -22,7 +22,7 @@ namespace Stupide_Vautour.players
              String txt = " ";
              txt = Console.In.ReadLine();
              cardToPlay = Convert.ToInt32(txt);
-             return myCards.getCards()[cardToPlay-1];
+             return myCards.getCards()[cardToPlay];
          } 
     }
    

@@ -16,15 +16,15 @@ namespace Stupide_Vautour
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
 
-            //Application.Run(new MainBoard());
-            Player p1 = new Stupid();
-            Card c = p1.play(new Card(Card.ANIMAL, 5));
-            Console.WriteLine("hello");
-            Console.WriteLine(c.toString());
-            Console.ReadLine();
+            Application.Run(new MainBoard());
+            //Player p1 = new Stupid();
+            //Card c = p1.play(new Card(Card.ANIMAL, 5));
+            //Console.WriteLine("hello");
+            //Console.WriteLine(c.toString());
+            //Console.ReadLine();
         }
     }
 }

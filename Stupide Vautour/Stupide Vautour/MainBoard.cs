@@ -28,5 +28,20 @@ namespace Stupide_Vautour
             board.play(new Card(Card.ANIMAL, 5));
 
         }
+
+        private void labelJoueur1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
