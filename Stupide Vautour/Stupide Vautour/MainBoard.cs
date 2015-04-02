@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Stupide_Vautour.game;
+using Stupide_Vautour.players;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +14,20 @@ namespace Stupide_Vautour
 {
     public partial class MainBoard : Form
     {
+        Board board;
+        int nbPlayers;
+
         public MainBoard()
         {
             InitializeComponent();
-            Console.WriteLine("Coucou bienvenue l'équipe de ouf!");
+            nbPlayers = 2;
+            List<Player> players = new List<Player>();
+            players.Add(new Human());
+            players.Add(new Human());
+            board = new Board(players);
+            board.play(new Card(Card.ANIMAL, 5);
+
+
         }
     }
 }
