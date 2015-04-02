@@ -57,5 +57,10 @@ namespace Stupide_Vautour.game
         }
 
 
+
+        internal int getSize()
+        {
+            return cardStack.Count;
+        }
     }
 }

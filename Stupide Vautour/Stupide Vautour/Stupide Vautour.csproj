@@ -48,10 +48,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="game\Turn.cs" />
-    <Compile Include="MainBoard.cs">
+    <Compile Include="view\HandChoiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainBoard.Designer.cs">
+    <Compile Include="view\HandChoiceForm.Designer.cs">
+      <DependentUpon>HandChoiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\MainBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\MainBoard.Designer.cs">
       <DependentUpon>MainBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="game\Board.cs" />
@@ -62,7 +68,10 @@
     <Compile Include="players\Stupid.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainBoard.resx">
+    <EmbeddedResource Include="view\HandChoiceForm.resx">
+      <DependentUpon>HandChoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\MainBoard.resx">
       <DependentUpon>MainBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

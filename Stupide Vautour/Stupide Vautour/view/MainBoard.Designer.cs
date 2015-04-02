@@ -122,7 +122,6 @@
             this.labelJoueur1.Size = new System.Drawing.Size(67, 13);
             this.labelJoueur1.TabIndex = 0;
             this.labelJoueur1.Text = "labelJoueur1";
-            this.labelJoueur1.Click += new System.EventHandler(this.labelJoueur1_Click);
             // 
             // labelJoueur2
             // 
@@ -168,7 +167,6 @@
             this.labelPioche.Size = new System.Drawing.Size(62, 13);
             this.labelPioche.TabIndex = 0;
             this.labelPioche.Text = "labelPioche";
-            this.labelPioche.Click += new System.EventHandler(this.label1_Click);
             // 
             // labelCarteAnimal
             // 
@@ -178,7 +176,6 @@
             this.labelCarteAnimal.Size = new System.Drawing.Size(85, 13);
             this.labelCarteAnimal.TabIndex = 0;
             this.labelCarteAnimal.Text = "labelCarteAnimal";
-            this.labelCarteAnimal.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // panelCarteJoue1
             // 
@@ -260,6 +257,7 @@
             this.buttonPlay.TabIndex = 6;
             this.buttonPlay.Text = "Jouer !";
             this.buttonPlay.UseVisualStyleBackColor = true;
+            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
             // 
             // labelScore3
             // 

@@ -17,32 +17,39 @@ namespace Stupide_Vautour
         Board board;
         int nbPlayers;
         List<Player> players;
+        Stack piocheAnimal;
 
         public MainBoard()
         {
             InitializeComponent();
-            nbPlayers = 2;
+            nbPlayers = 4;
             List<Player> players = new List<Player>();
             players.Add(new Human());
             players.Add(new Human());
+            players.Add(new Human());
+            players.Add(new Human());
             board = new Board(players);
-            //board.play(new Card(Card.ANIMAL, 5));
-
+            piocheAnimal = new Stack(false);
         }
 
-        private void labelJoueur1_Click(object sender, EventArgs e)
+        private void buttonPlay_Click(object sender, EventArgs e)
         {
-
+            
+            for (int i=0; i<nbPlayers; i++)
+            {
+                if (players[i] is Human )
+                {
+                    getChoice(i);
+                }
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void getChoice(int numPlayer)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
 
-        }
+
     }
 }
