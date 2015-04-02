@@ -31,6 +31,6 @@ namespace Stupide_Vautour.players
         public void addScore(int scoreToAdd){
             score += scoreToAdd;
         }
-        public abstract Card play(Card animal);
+        public abstract Card play();
     }
 }

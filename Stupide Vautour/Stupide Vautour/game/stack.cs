@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Stupide_Vautour.game
 {
-    class Stack
+    public class Stack
     {
         public const int NB_CARD = 15;
 
@@ -18,6 +18,10 @@ namespace Stupide_Vautour.game
         {
             cardStack = new List<Card>(NB_CARD);
             initializeStack(isPlayer);
+            if (random == null)
+            {
+                random = new Random();
+            }
         }
 
         public void initializeStack(Boolean isPlayer)

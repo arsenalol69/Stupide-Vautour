@@ -25,8 +25,7 @@ namespace Stupide_Vautour
             players.Add(new Human());
             players.Add(new Human());
             board = new Board(players);
-            board.play(new Card(Card.ANIMAL, 5);
-
+            board.play(new Card(Card.ANIMAL, 5));
 
         }
     }
