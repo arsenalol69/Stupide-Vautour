@@ -21,7 +21,7 @@ namespace Stupide_Vautour
 
             //Application.Run(new MainBoard());
             Player p1 = new Stupid();
-            Card c = p1.play();
+            Card c = p1.play(new Card(Card.ANIMAL, 5));
             Console.WriteLine("hello");
             Console.WriteLine(c.toString());
             Console.ReadLine();

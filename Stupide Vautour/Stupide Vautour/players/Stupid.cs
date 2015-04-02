@@ -17,7 +17,7 @@ namespace Stupide_Vautour.players
 
         }
 
-        public override Card play()
+        public override Card play(Card animal)
         {
             return myCards.getRandomCard();
         } 

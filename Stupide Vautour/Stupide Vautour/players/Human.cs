@@ -14,7 +14,7 @@ namespace Stupide_Vautour.players
             
         }
 
-         public override Card play()
+         public override Card play(Card animal)
          {
              //Afficher cartes
              int cardToPlay;
