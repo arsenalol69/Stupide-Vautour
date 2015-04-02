@@ -22,16 +22,10 @@ namespace Stupide_Vautour.game
             players = listPlayers;  
         }
 
-        public void play(Card animal)
+        public void play(List<Card> cardsPlayed, Card animal)
         {
 
-            
-            List<Card> cardsPlayed = new List<Card>();
-            
-            foreach(Player p in players){
-                cardsPlayed.Add(p.play(animal));
-            }
-            
+                  
 
 
             if (animal.Force > 0)
