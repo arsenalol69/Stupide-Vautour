@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Stupide_Vautour.players;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace Stupide_Vautour
         {
             InitializeComponent();
             Console.WriteLine("Coucou bienvenue l'équipe de ouf!");
+            
         }
     }
 }

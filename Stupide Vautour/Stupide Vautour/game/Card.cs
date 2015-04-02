@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stupide_Vautour.game
 {
-    class Card
+    public class Card
     {
         public static int ANIMAL = 1;
         public static int PLAYER = 2;

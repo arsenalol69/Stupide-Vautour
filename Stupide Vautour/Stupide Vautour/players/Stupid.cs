@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Stupide_Vautour.players
 {
-    class Stupid : Player
+    public class Stupid : Player
     {
 
 
@@ -17,7 +17,7 @@ namespace Stupide_Vautour.players
 
         }
 
-        public override Card play(Card animal)
+        public override Card play()
         {
             return myCards.getRandomCard();
         } 
