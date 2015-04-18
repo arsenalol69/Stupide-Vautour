@@ -114,7 +114,7 @@ namespace Stupide_Vautour.game
             for (int i = 0; i < Stack.NB_CARD; i++)
             {
                 if (listCards[i] > 1)
-                    cancelCards(cards, i);
+                    cancelCards(cards, i+1);
             }
         
         }

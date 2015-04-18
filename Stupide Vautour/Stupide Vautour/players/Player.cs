@@ -9,14 +9,15 @@ namespace Stupide_Vautour.players
 {
     abstract public class Player
     {
-        protected static int numeroPlayer = 0;
+        protected static int lastNumeroPlayer = 0;
         protected int score = 0;
-
+        protected int numeroPlayer;
         protected Stack myCards;
 
         protected Player()
         {
-            numeroPlayer++;
+            lastNumeroPlayer++;
+            numeroPlayer = lastNumeroPlayer;
             score = 0;
             myCards = new Stack(true);
         }
@@ -32,5 +33,15 @@ namespace Stupide_Vautour.players
             score += scoreToAdd;
         }
         public abstract Card play(Card animal);
+
+        public Stack getHand()
+        {
+            return myCards;
+        }
+
+        public int getNumeroPlayer()
+        {
+            return numeroPlayer;
+        }
     }
 }

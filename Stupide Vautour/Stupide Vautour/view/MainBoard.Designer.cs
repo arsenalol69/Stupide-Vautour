@@ -29,16 +29,20 @@
         private void InitializeComponent()
         {
             this.panelPioche = new System.Windows.Forms.Panel();
-            this.panelJoueur4 = new System.Windows.Forms.Panel();
-            this.panelJoueur1 = new System.Windows.Forms.Panel();
-            this.panelJoueur3 = new System.Windows.Forms.Panel();
-            this.panelJoueur2 = new System.Windows.Forms.Panel();
-            this.labelJoueur1 = new System.Windows.Forms.Label();
-            this.labelJoueur2 = new System.Windows.Forms.Label();
-            this.labelJoueur3 = new System.Windows.Forms.Label();
-            this.labelJoueur4 = new System.Windows.Forms.Label();
-            this.panelCarteAnimal = new System.Windows.Forms.Panel();
             this.labelPioche = new System.Windows.Forms.Label();
+            this.panelJoueur4 = new System.Windows.Forms.Panel();
+            this.labelScore4 = new System.Windows.Forms.Label();
+            this.labelJoueur4 = new System.Windows.Forms.Label();
+            this.panelJoueur1 = new System.Windows.Forms.Panel();
+            this.labelScore1 = new System.Windows.Forms.Label();
+            this.labelJoueur1 = new System.Windows.Forms.Label();
+            this.panelJoueur3 = new System.Windows.Forms.Panel();
+            this.labelScore3 = new System.Windows.Forms.Label();
+            this.labelJoueur3 = new System.Windows.Forms.Label();
+            this.panelJoueur2 = new System.Windows.Forms.Panel();
+            this.labelScore2 = new System.Windows.Forms.Label();
+            this.labelJoueur2 = new System.Windows.Forms.Label();
+            this.panelCarteAnimal = new System.Windows.Forms.Panel();
             this.labelCarteAnimal = new System.Windows.Forms.Label();
             this.panelCarteJoue1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,10 +53,7 @@
             this.panelCarteJoue4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonPlay = new System.Windows.Forms.Button();
-            this.labelScore3 = new System.Windows.Forms.Label();
-            this.labelScore2 = new System.Windows.Forms.Label();
-            this.labelScore1 = new System.Windows.Forms.Label();
-            this.labelScore4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelPioche.SuspendLayout();
             this.panelJoueur4.SuspendLayout();
             this.panelJoueur1.SuspendLayout();
@@ -74,6 +75,15 @@
             this.panelPioche.Size = new System.Drawing.Size(134, 170);
             this.panelPioche.TabIndex = 0;
             // 
+            // labelPioche
+            // 
+            this.labelPioche.AutoSize = true;
+            this.labelPioche.Location = new System.Drawing.Point(47, 75);
+            this.labelPioche.Name = "labelPioche";
+            this.labelPioche.Size = new System.Drawing.Size(62, 13);
+            this.labelPioche.TabIndex = 0;
+            this.labelPioche.Text = "labelPioche";
+            // 
             // panelJoueur4
             // 
             this.panelJoueur4.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -83,6 +93,24 @@
             this.panelJoueur4.Name = "panelJoueur4";
             this.panelJoueur4.Size = new System.Drawing.Size(134, 82);
             this.panelJoueur4.TabIndex = 4;
+            // 
+            // labelScore4
+            // 
+            this.labelScore4.AutoSize = true;
+            this.labelScore4.Location = new System.Drawing.Point(13, 15);
+            this.labelScore4.Name = "labelScore4";
+            this.labelScore4.Size = new System.Drawing.Size(13, 13);
+            this.labelScore4.TabIndex = 3;
+            this.labelScore4.Text = "0";
+            // 
+            // labelJoueur4
+            // 
+            this.labelJoueur4.AutoSize = true;
+            this.labelJoueur4.Location = new System.Drawing.Point(50, 35);
+            this.labelJoueur4.Name = "labelJoueur4";
+            this.labelJoueur4.Size = new System.Drawing.Size(67, 13);
+            this.labelJoueur4.TabIndex = 2;
+            this.labelJoueur4.Text = "labelJoueur4";
             // 
             // panelJoueur1
             // 
@@ -94,6 +122,24 @@
             this.panelJoueur1.Size = new System.Drawing.Size(131, 82);
             this.panelJoueur1.TabIndex = 4;
             // 
+            // labelScore1
+            // 
+            this.labelScore1.AutoSize = true;
+            this.labelScore1.Location = new System.Drawing.Point(14, 12);
+            this.labelScore1.Name = "labelScore1";
+            this.labelScore1.Size = new System.Drawing.Size(13, 13);
+            this.labelScore1.TabIndex = 1;
+            this.labelScore1.Text = "0";
+            // 
+            // labelJoueur1
+            // 
+            this.labelJoueur1.AutoSize = true;
+            this.labelJoueur1.Location = new System.Drawing.Point(33, 35);
+            this.labelJoueur1.Name = "labelJoueur1";
+            this.labelJoueur1.Size = new System.Drawing.Size(67, 13);
+            this.labelJoueur1.TabIndex = 0;
+            this.labelJoueur1.Text = "labelJoueur1";
+            // 
             // panelJoueur3
             // 
             this.panelJoueur3.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -103,6 +149,24 @@
             this.panelJoueur3.Name = "panelJoueur3";
             this.panelJoueur3.Size = new System.Drawing.Size(131, 82);
             this.panelJoueur3.TabIndex = 4;
+            // 
+            // labelScore3
+            // 
+            this.labelScore3.AutoSize = true;
+            this.labelScore3.Location = new System.Drawing.Point(9, 12);
+            this.labelScore3.Name = "labelScore3";
+            this.labelScore3.Size = new System.Drawing.Size(13, 13);
+            this.labelScore3.TabIndex = 3;
+            this.labelScore3.Text = "0";
+            // 
+            // labelJoueur3
+            // 
+            this.labelJoueur3.AutoSize = true;
+            this.labelJoueur3.Location = new System.Drawing.Point(48, 35);
+            this.labelJoueur3.Name = "labelJoueur3";
+            this.labelJoueur3.Size = new System.Drawing.Size(67, 13);
+            this.labelJoueur3.TabIndex = 2;
+            this.labelJoueur3.Text = "labelJoueur3";
             // 
             // panelJoueur2
             // 
@@ -114,14 +178,14 @@
             this.panelJoueur2.Size = new System.Drawing.Size(131, 82);
             this.panelJoueur2.TabIndex = 5;
             // 
-            // labelJoueur1
+            // labelScore2
             // 
-            this.labelJoueur1.AutoSize = true;
-            this.labelJoueur1.Location = new System.Drawing.Point(33, 35);
-            this.labelJoueur1.Name = "labelJoueur1";
-            this.labelJoueur1.Size = new System.Drawing.Size(67, 13);
-            this.labelJoueur1.TabIndex = 0;
-            this.labelJoueur1.Text = "labelJoueur1";
+            this.labelScore2.AutoSize = true;
+            this.labelScore2.Location = new System.Drawing.Point(21, 16);
+            this.labelScore2.Name = "labelScore2";
+            this.labelScore2.Size = new System.Drawing.Size(13, 13);
+            this.labelScore2.TabIndex = 2;
+            this.labelScore2.Text = "0";
             // 
             // labelJoueur2
             // 
@@ -132,24 +196,6 @@
             this.labelJoueur2.TabIndex = 1;
             this.labelJoueur2.Text = "labelJoueur2";
             // 
-            // labelJoueur3
-            // 
-            this.labelJoueur3.AutoSize = true;
-            this.labelJoueur3.Location = new System.Drawing.Point(48, 35);
-            this.labelJoueur3.Name = "labelJoueur3";
-            this.labelJoueur3.Size = new System.Drawing.Size(67, 13);
-            this.labelJoueur3.TabIndex = 2;
-            this.labelJoueur3.Text = "labelJoueur3";
-            // 
-            // labelJoueur4
-            // 
-            this.labelJoueur4.AutoSize = true;
-            this.labelJoueur4.Location = new System.Drawing.Point(50, 35);
-            this.labelJoueur4.Name = "labelJoueur4";
-            this.labelJoueur4.Size = new System.Drawing.Size(67, 13);
-            this.labelJoueur4.TabIndex = 2;
-            this.labelJoueur4.Text = "labelJoueur4";
-            // 
             // panelCarteAnimal
             // 
             this.panelCarteAnimal.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -158,15 +204,6 @@
             this.panelCarteAnimal.Name = "panelCarteAnimal";
             this.panelCarteAnimal.Size = new System.Drawing.Size(134, 170);
             this.panelCarteAnimal.TabIndex = 1;
-            // 
-            // labelPioche
-            // 
-            this.labelPioche.AutoSize = true;
-            this.labelPioche.Location = new System.Drawing.Point(47, 75);
-            this.labelPioche.Name = "labelPioche";
-            this.labelPioche.Size = new System.Drawing.Size(62, 13);
-            this.labelPioche.TabIndex = 0;
-            this.labelPioche.Text = "labelPioche";
             // 
             // labelCarteAnimal
             // 
@@ -259,47 +296,22 @@
             this.buttonPlay.UseVisualStyleBackColor = true;
             this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
             // 
-            // labelScore3
+            // button1
             // 
-            this.labelScore3.AutoSize = true;
-            this.labelScore3.Location = new System.Drawing.Point(9, 12);
-            this.labelScore3.Name = "labelScore3";
-            this.labelScore3.Size = new System.Drawing.Size(13, 13);
-            this.labelScore3.TabIndex = 3;
-            this.labelScore3.Text = "0";
-            // 
-            // labelScore2
-            // 
-            this.labelScore2.AutoSize = true;
-            this.labelScore2.Location = new System.Drawing.Point(21, 16);
-            this.labelScore2.Name = "labelScore2";
-            this.labelScore2.Size = new System.Drawing.Size(13, 13);
-            this.labelScore2.TabIndex = 2;
-            this.labelScore2.Text = "0";
-            // 
-            // labelScore1
-            // 
-            this.labelScore1.AutoSize = true;
-            this.labelScore1.Location = new System.Drawing.Point(14, 12);
-            this.labelScore1.Name = "labelScore1";
-            this.labelScore1.Size = new System.Drawing.Size(13, 13);
-            this.labelScore1.TabIndex = 1;
-            this.labelScore1.Text = "0";
-            // 
-            // labelScore4
-            // 
-            this.labelScore4.AutoSize = true;
-            this.labelScore4.Location = new System.Drawing.Point(13, 15);
-            this.labelScore4.Name = "labelScore4";
-            this.labelScore4.Size = new System.Drawing.Size(13, 13);
-            this.labelScore4.TabIndex = 3;
-            this.labelScore4.Text = "0";
+            this.button1.Location = new System.Drawing.Point(767, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Lancer partie";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.lancerPartie);
             // 
             // MainBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonPlay);
             this.Controls.Add(this.panelCarteJoue4);
             this.Controls.Add(this.panelCarteJoue3);
@@ -365,6 +377,7 @@
         private System.Windows.Forms.Label labelScore1;
         private System.Windows.Forms.Label labelScore3;
         private System.Windows.Forms.Label labelScore2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
