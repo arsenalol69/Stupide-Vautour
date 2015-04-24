@@ -36,9 +36,9 @@ namespace Stupide_Vautour.game
             }
             else
             {
-                for(int i=-6; i<15; i++)
+                for(int i=-5; i<11; i++)
                 {
-                    if (i!=0) cardStack.Add(new Card(Card.ANIMAL, i + 1));
+                    if (i!=0) cardStack.Add(new Card(Card.ANIMAL, i));
                 }
             }
         }
@@ -46,9 +46,8 @@ namespace Stupide_Vautour.game
         public Card getRandomCard()
         {
             int indice = random.Next(cardStack.Count);
-            Card c = (Card)cardStack[indice];
-            cardStack.RemoveAt(indice);
-            return c;
+            return pickCard(indice);
+            
         }
 
         public List<Card> getCards()
@@ -56,11 +55,18 @@ namespace Stupide_Vautour.game
             return cardStack;
         }
 
+        public Card pickCard(int indice)
+        {
+            Card c = cardStack[indice];
+            cardStack.RemoveAt(indice);
+            return c;
+        }
 
-
-        internal int getSize()
+        public int getSize()
         {
             return cardStack.Count;
         }
+
+
     }
 }

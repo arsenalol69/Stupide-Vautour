@@ -31,7 +31,9 @@ namespace Stupide_Vautour.game
             get { return type; }
         }
 
-        public string toString()
+
+
+        public override string ToString()
         {
             return "Carte " + force + " de type " + (type==ANIMAL ? "Animal" : "Joueur");
         }
