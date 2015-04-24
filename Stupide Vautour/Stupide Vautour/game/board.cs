@@ -41,7 +41,7 @@ namespace Stupide_Vautour.game
                     players[min].addScore(animal.Force);
             }
 
-            history.Add(new Turn(players, animal));
+            history.Add(new Turn(new List<Player>(players), animal));
                 
 
         }
@@ -101,6 +101,8 @@ namespace Stupide_Vautour.game
 
             int[] listCards = new int[Stack.NB_CARD];
 
+            List<int> canceledCard =new List<int>(); 
+
             for (int i = 0; i < Stack.NB_CARD; i++)
             {
                 listCards[i] = 0;
@@ -114,19 +116,19 @@ namespace Stupide_Vautour.game
             for (int i = 0; i < Stack.NB_CARD; i++)
             {
                 if (listCards[i] > 1)
-                    cancelCards(cards, i);
+                    cancelCards(cards, i+1);
             }
         
         }
 
         private void cancelCards(List<Card> cards, int val)
         {
-            for (int i = 0; i < cards.Count; i++)
+            foreach (Card c in cards)
             {
-                if (cards[i].Force == val)
+                if (c.Force == val)
                 {
-                    cards.RemoveAt(i);
-                    i--;
+                    cards.Remove(c);
+                    
                 }
                     
             }
