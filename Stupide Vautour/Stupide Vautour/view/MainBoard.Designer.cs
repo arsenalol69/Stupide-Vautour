@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainBoard));
             this.panelPioche = new System.Windows.Forms.Panel();
             this.labelPioche = new System.Windows.Forms.Label();
             this.panelJoueur4 = new System.Windows.Forms.Panel();
@@ -42,8 +43,6 @@
             this.panelJoueur2 = new System.Windows.Forms.Panel();
             this.labelScore2 = new System.Windows.Forms.Label();
             this.labelJoueur2 = new System.Windows.Forms.Label();
-            this.panelCarteAnimal = new System.Windows.Forms.Panel();
-            this.labelCarteAnimal = new System.Windows.Forms.Label();
             this.panelCarteJoue1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelCarteJoue2 = new System.Windows.Forms.Panel();
@@ -54,280 +53,192 @@
             this.label4 = new System.Windows.Forms.Label();
             this.buttonPlay = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panelPioche.SuspendLayout();
+            this.panelCardAnimal = new System.Windows.Forms.PictureBox();
             this.panelJoueur4.SuspendLayout();
             this.panelJoueur1.SuspendLayout();
             this.panelJoueur3.SuspendLayout();
             this.panelJoueur2.SuspendLayout();
-            this.panelCarteAnimal.SuspendLayout();
             this.panelCarteJoue1.SuspendLayout();
             this.panelCarteJoue2.SuspendLayout();
             this.panelCarteJoue3.SuspendLayout();
             this.panelCarteJoue4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelCardAnimal)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPioche
             // 
             this.panelPioche.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelPioche.Controls.Add(this.labelPioche);
-            this.panelPioche.Location = new System.Drawing.Point(12, 9);
+            this.panelPioche.BackgroundImage = global::Stupide_Vautour.Properties.Resources.carte;
+            resources.ApplyResources(this.panelPioche, "panelPioche");
             this.panelPioche.Name = "panelPioche";
-            this.panelPioche.Size = new System.Drawing.Size(134, 170);
-            this.panelPioche.TabIndex = 0;
             // 
             // labelPioche
             // 
-            this.labelPioche.AutoSize = true;
-            this.labelPioche.Location = new System.Drawing.Point(47, 75);
+            resources.ApplyResources(this.labelPioche, "labelPioche");
             this.labelPioche.Name = "labelPioche";
-            this.labelPioche.Size = new System.Drawing.Size(62, 13);
-            this.labelPioche.TabIndex = 0;
-            this.labelPioche.Text = "labelPioche";
             // 
             // panelJoueur4
             // 
             this.panelJoueur4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelJoueur4.Controls.Add(this.labelScore4);
             this.panelJoueur4.Controls.Add(this.labelJoueur4);
-            this.panelJoueur4.Location = new System.Drawing.Point(12, 338);
+            resources.ApplyResources(this.panelJoueur4, "panelJoueur4");
             this.panelJoueur4.Name = "panelJoueur4";
-            this.panelJoueur4.Size = new System.Drawing.Size(134, 82);
-            this.panelJoueur4.TabIndex = 4;
             // 
             // labelScore4
             // 
-            this.labelScore4.AutoSize = true;
-            this.labelScore4.Location = new System.Drawing.Point(13, 15);
+            resources.ApplyResources(this.labelScore4, "labelScore4");
             this.labelScore4.Name = "labelScore4";
-            this.labelScore4.Size = new System.Drawing.Size(13, 13);
-            this.labelScore4.TabIndex = 3;
-            this.labelScore4.Text = "0";
             // 
             // labelJoueur4
             // 
-            this.labelJoueur4.AutoSize = true;
-            this.labelJoueur4.Location = new System.Drawing.Point(50, 35);
+            resources.ApplyResources(this.labelJoueur4, "labelJoueur4");
             this.labelJoueur4.Name = "labelJoueur4";
-            this.labelJoueur4.Size = new System.Drawing.Size(67, 13);
-            this.labelJoueur4.TabIndex = 2;
-            this.labelJoueur4.Text = "labelJoueur4";
             // 
             // panelJoueur1
             // 
             this.panelJoueur1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelJoueur1.Controls.Add(this.labelScore1);
             this.panelJoueur1.Controls.Add(this.labelJoueur1);
-            this.panelJoueur1.Location = new System.Drawing.Point(378, 621);
+            resources.ApplyResources(this.panelJoueur1, "panelJoueur1");
             this.panelJoueur1.Name = "panelJoueur1";
-            this.panelJoueur1.Size = new System.Drawing.Size(131, 82);
-            this.panelJoueur1.TabIndex = 4;
             // 
             // labelScore1
             // 
-            this.labelScore1.AutoSize = true;
-            this.labelScore1.Location = new System.Drawing.Point(14, 12);
+            resources.ApplyResources(this.labelScore1, "labelScore1");
             this.labelScore1.Name = "labelScore1";
-            this.labelScore1.Size = new System.Drawing.Size(13, 13);
-            this.labelScore1.TabIndex = 1;
-            this.labelScore1.Text = "0";
             // 
             // labelJoueur1
             // 
-            this.labelJoueur1.AutoSize = true;
-            this.labelJoueur1.Location = new System.Drawing.Point(33, 35);
+            resources.ApplyResources(this.labelJoueur1, "labelJoueur1");
             this.labelJoueur1.Name = "labelJoueur1";
-            this.labelJoueur1.Size = new System.Drawing.Size(67, 13);
-            this.labelJoueur1.TabIndex = 0;
-            this.labelJoueur1.Text = "labelJoueur1";
             // 
             // panelJoueur3
             // 
             this.panelJoueur3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelJoueur3.Controls.Add(this.labelScore3);
             this.panelJoueur3.Controls.Add(this.labelJoueur3);
-            this.panelJoueur3.Location = new System.Drawing.Point(378, 12);
+            resources.ApplyResources(this.panelJoueur3, "panelJoueur3");
             this.panelJoueur3.Name = "panelJoueur3";
-            this.panelJoueur3.Size = new System.Drawing.Size(131, 82);
-            this.panelJoueur3.TabIndex = 4;
             // 
             // labelScore3
             // 
-            this.labelScore3.AutoSize = true;
-            this.labelScore3.Location = new System.Drawing.Point(9, 12);
+            resources.ApplyResources(this.labelScore3, "labelScore3");
             this.labelScore3.Name = "labelScore3";
-            this.labelScore3.Size = new System.Drawing.Size(13, 13);
-            this.labelScore3.TabIndex = 3;
-            this.labelScore3.Text = "0";
             // 
             // labelJoueur3
             // 
-            this.labelJoueur3.AutoSize = true;
-            this.labelJoueur3.Location = new System.Drawing.Point(48, 35);
+            resources.ApplyResources(this.labelJoueur3, "labelJoueur3");
             this.labelJoueur3.Name = "labelJoueur3";
-            this.labelJoueur3.Size = new System.Drawing.Size(67, 13);
-            this.labelJoueur3.TabIndex = 2;
-            this.labelJoueur3.Text = "labelJoueur3";
             // 
             // panelJoueur2
             // 
             this.panelJoueur2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelJoueur2.Controls.Add(this.labelScore2);
             this.panelJoueur2.Controls.Add(this.labelJoueur2);
-            this.panelJoueur2.Location = new System.Drawing.Point(826, 338);
+            resources.ApplyResources(this.panelJoueur2, "panelJoueur2");
             this.panelJoueur2.Name = "panelJoueur2";
-            this.panelJoueur2.Size = new System.Drawing.Size(131, 82);
-            this.panelJoueur2.TabIndex = 5;
             // 
             // labelScore2
             // 
-            this.labelScore2.AutoSize = true;
-            this.labelScore2.Location = new System.Drawing.Point(21, 16);
+            resources.ApplyResources(this.labelScore2, "labelScore2");
             this.labelScore2.Name = "labelScore2";
-            this.labelScore2.Size = new System.Drawing.Size(13, 13);
-            this.labelScore2.TabIndex = 2;
-            this.labelScore2.Text = "0";
             // 
             // labelJoueur2
             // 
-            this.labelJoueur2.AutoSize = true;
-            this.labelJoueur2.Location = new System.Drawing.Point(34, 35);
+            resources.ApplyResources(this.labelJoueur2, "labelJoueur2");
             this.labelJoueur2.Name = "labelJoueur2";
-            this.labelJoueur2.Size = new System.Drawing.Size(67, 13);
-            this.labelJoueur2.TabIndex = 1;
-            this.labelJoueur2.Text = "labelJoueur2";
-            // 
-            // panelCarteAnimal
-            // 
-            this.panelCarteAnimal.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelCarteAnimal.Controls.Add(this.labelCarteAnimal);
-            this.panelCarteAnimal.Location = new System.Drawing.Point(398, 285);
-            this.panelCarteAnimal.Name = "panelCarteAnimal";
-            this.panelCarteAnimal.Size = new System.Drawing.Size(134, 170);
-            this.panelCarteAnimal.TabIndex = 1;
-            // 
-            // labelCarteAnimal
-            // 
-            this.labelCarteAnimal.AutoSize = true;
-            this.labelCarteAnimal.Location = new System.Drawing.Point(30, 73);
-            this.labelCarteAnimal.Name = "labelCarteAnimal";
-            this.labelCarteAnimal.Size = new System.Drawing.Size(85, 13);
-            this.labelCarteAnimal.TabIndex = 0;
-            this.labelCarteAnimal.Text = "labelCarteAnimal";
             // 
             // panelCarteJoue1
             // 
             this.panelCarteJoue1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelCarteJoue1.Controls.Add(this.label1);
-            this.panelCarteJoue1.Location = new System.Drawing.Point(420, 482);
+            resources.ApplyResources(this.panelCarteJoue1, "panelCarteJoue1");
             this.panelCarteJoue1.Name = "panelCarteJoue1";
-            this.panelCarteJoue1.Size = new System.Drawing.Size(89, 112);
-            this.panelCarteJoue1.TabIndex = 2;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 73);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
             // 
             // panelCarteJoue2
             // 
             this.panelCarteJoue2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelCarteJoue2.Controls.Add(this.label2);
-            this.panelCarteJoue2.Location = new System.Drawing.Point(599, 308);
+            resources.ApplyResources(this.panelCarteJoue2, "panelCarteJoue2");
             this.panelCarteJoue2.Name = "panelCarteJoue2";
-            this.panelCarteJoue2.Size = new System.Drawing.Size(89, 112);
-            this.panelCarteJoue2.TabIndex = 3;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 73);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "label2";
             // 
             // panelCarteJoue3
             // 
             this.panelCarteJoue3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelCarteJoue3.Controls.Add(this.label3);
-            this.panelCarteJoue3.Location = new System.Drawing.Point(404, 130);
+            resources.ApplyResources(this.panelCarteJoue3, "panelCarteJoue3");
             this.panelCarteJoue3.Name = "panelCarteJoue3";
-            this.panelCarteJoue3.Size = new System.Drawing.Size(89, 112);
-            this.panelCarteJoue3.TabIndex = 3;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 73);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "label3";
             // 
             // panelCarteJoue4
             // 
             this.panelCarteJoue4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelCarteJoue4.Controls.Add(this.label4);
-            this.panelCarteJoue4.Location = new System.Drawing.Point(265, 295);
+            resources.ApplyResources(this.panelCarteJoue4, "panelCarteJoue4");
             this.panelCarteJoue4.Name = "panelCarteJoue4";
-            this.panelCarteJoue4.Size = new System.Drawing.Size(89, 112);
-            this.panelCarteJoue4.TabIndex = 3;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 73);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "label4";
             // 
             // buttonPlay
             // 
-            this.buttonPlay.Location = new System.Drawing.Point(778, 42);
+            resources.ApplyResources(this.buttonPlay, "buttonPlay");
             this.buttonPlay.Name = "buttonPlay";
-            this.buttonPlay.Size = new System.Drawing.Size(75, 23);
-            this.buttonPlay.TabIndex = 6;
-            this.buttonPlay.Text = "Jouer !";
             this.buttonPlay.UseVisualStyleBackColor = true;
             this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(767, 12);
+            resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Lancer partie";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.lancerPartie);
             // 
+            // panelCardAnimal
+            // 
+            this.panelCardAnimal.Image = global::Stupide_Vautour.Properties.Resources.carte;
+            resources.ApplyResources(this.panelCardAnimal, "panelCardAnimal");
+            this.panelCardAnimal.Name = "panelCardAnimal";
+            this.panelCardAnimal.TabStop = false;
+            // 
             // MainBoard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.BackgroundImage = global::Stupide_Vautour.Properties.Resources.background;
+            this.Controls.Add(this.panelCardAnimal);
+            this.Controls.Add(this.labelPioche);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonPlay);
             this.Controls.Add(this.panelCarteJoue4);
             this.Controls.Add(this.panelCarteJoue3);
             this.Controls.Add(this.panelCarteJoue2);
             this.Controls.Add(this.panelCarteJoue1);
-            this.Controls.Add(this.panelCarteAnimal);
             this.Controls.Add(this.panelJoueur2);
             this.Controls.Add(this.panelJoueur3);
             this.Controls.Add(this.panelJoueur1);
             this.Controls.Add(this.panelJoueur4);
             this.Controls.Add(this.panelPioche);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "MainBoard";
-            this.Text = "Stupid Vautour";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panelPioche.ResumeLayout(false);
-            this.panelPioche.PerformLayout();
             this.panelJoueur4.ResumeLayout(false);
             this.panelJoueur4.PerformLayout();
             this.panelJoueur1.ResumeLayout(false);
@@ -336,8 +247,6 @@
             this.panelJoueur3.PerformLayout();
             this.panelJoueur2.ResumeLayout(false);
             this.panelJoueur2.PerformLayout();
-            this.panelCarteAnimal.ResumeLayout(false);
-            this.panelCarteAnimal.PerformLayout();
             this.panelCarteJoue1.ResumeLayout(false);
             this.panelCarteJoue1.PerformLayout();
             this.panelCarteJoue2.ResumeLayout(false);
@@ -346,7 +255,9 @@
             this.panelCarteJoue3.PerformLayout();
             this.panelCarteJoue4.ResumeLayout(false);
             this.panelCarteJoue4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelCardAnimal)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -362,8 +273,6 @@
         private System.Windows.Forms.Label labelJoueur4;
         private System.Windows.Forms.Label labelJoueur3;
         private System.Windows.Forms.Label labelJoueur2;
-        private System.Windows.Forms.Panel panelCarteAnimal;
-        private System.Windows.Forms.Label labelCarteAnimal;
         private System.Windows.Forms.Panel panelCarteJoue1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelCarteJoue2;
@@ -378,6 +287,7 @@
         private System.Windows.Forms.Label labelScore3;
         private System.Windows.Forms.Label labelScore2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox panelCardAnimal;
     }
 }
 

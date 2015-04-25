@@ -7,6 +7,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,6 +24,10 @@ namespace Stupide_Vautour
         List<Card> choiceRoundCard;
         List<Label> labelChoice;
         List<Label> labelScore;
+        List<Panel> panelChoice;
+        const int CARD_HEIGHT = 505;
+         const int CARD_WIDTH = 364;
+
         public MainBoard()
         {
             InitializeComponent();
@@ -47,6 +53,18 @@ namespace Stupide_Vautour
             labelScore.Add(labelScore3);
             labelScore.Add(labelScore4);
             piocheAnimal = new Stack(false);
+            //Carte de jeu
+            panelChoice = new List<Panel>();
+            panelChoice.Add(panelCarteJoue1);
+            panelChoice.Add(panelCarteJoue2);
+            panelChoice.Add(panelCarteJoue3);
+            panelChoice.Add(panelCarteJoue4);
+            for (int i = 0; i < panelChoice.Count; i++)
+            {
+                panelChoice[i].BackgroundImage = global::Stupide_Vautour.Properties.Resources.carte;
+                panelChoice[i].BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                panelChoice[i].Size = new System.Drawing.Size(CARD_WIDTH/3, CARD_HEIGHT/3);
+            }
         }
 
         private void buttonPlay_Click(object sender, EventArgs e)
@@ -108,7 +126,8 @@ namespace Stupide_Vautour
                 labelChoice[i].Text = "0";
             }
             animalCard = piocheAnimal.getRandomCard();
-            labelCarteAnimal.Text = animalCard.Force.ToString();
+            panelCardAnimal.Image = Image.FromFile("Resources/cartePioche" + animalCard.Force +".png");
+                
         }
 
     }
