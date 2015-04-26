@@ -22,9 +22,8 @@ namespace Stupide_Vautour
         Stack piocheAnimal;
         Card animalCard;
         List<Card> choiceRoundCard;
-        List<Label> labelChoice;
         List<Label> labelScore;
-        List<Panel> panelChoice;
+        List<PictureBox> panelChoice;
         const int CARD_HEIGHT = 505;
          const int CARD_WIDTH = 364;
 
@@ -39,13 +38,6 @@ namespace Stupide_Vautour
             players.Add(new Human());
             //Création du board
             board = new Board(players);
-            //Mise en place des label
-            //Label des choix des cartes
-            labelChoice = new List<Label>();
-            labelChoice.Add(label1);
-            labelChoice.Add(label2);
-            labelChoice.Add(label3);
-            labelChoice.Add(label4);
             //Label des scores
             labelScore = new List<Label>();
             labelScore.Add(labelScore1);
@@ -54,7 +46,7 @@ namespace Stupide_Vautour
             labelScore.Add(labelScore4);
             piocheAnimal = new Stack(false);
             //Carte de jeu
-            panelChoice = new List<Panel>();
+            panelChoice = new List<PictureBox>();
             panelChoice.Add(panelCarteJoue1);
             panelChoice.Add(panelCarteJoue2);
             panelChoice.Add(panelCarteJoue3);
@@ -80,7 +72,7 @@ namespace Stupide_Vautour
             }
             for (int i =0; i<players.Count;i++)
             {
-                labelChoice[i].Text = choiceRoundCard[i].Force.ToString();
+                panelChoice[i].Image = Image.FromFile("Resources/carteJoueur" + ((int)(i+1)) + choiceRoundCard[i].Force.ToString() + ".png");
             }
             this.Refresh();
             board.play(choiceRoundCard, animalCard);
@@ -116,6 +108,7 @@ namespace Stupide_Vautour
             }
             updateViewPlayers();
             piocher();
+            buttonPlay.Enabled = true;
            
         }
 
@@ -123,11 +116,12 @@ namespace Stupide_Vautour
         {
             for (int i = 0; i < players.Count; i++)
             {
-                labelChoice[i].Text = "0";
+               panelChoice[i].Image = Image.FromFile("Resources/carte.png");
+    
             }
             animalCard = piocheAnimal.getRandomCard();
             panelCardAnimal.Image = Image.FromFile("Resources/cartePioche" + animalCard.Force +".png");
-                
+
         }
 
     }

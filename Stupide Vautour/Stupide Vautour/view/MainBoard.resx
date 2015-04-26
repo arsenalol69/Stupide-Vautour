@@ -118,112 +118,46 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panelPioche.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
+  <data name="panelCardAnimal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="panelPioche.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
+  <data name="panelCardAnimal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>722, 398</value>
   </data>
-  <data name="panelPioche.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 252</value>
+  <data name="panelCardAnimal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 253</value>
+  </data>
+  <data name="panelCardAnimal.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panelPioche.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="panelCardAnimal.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
-  <data name="&gt;&gt;panelPioche.Name" xml:space="preserve">
-    <value>panelPioche</value>
+  <data name="&gt;&gt;panelCardAnimal.Name" xml:space="preserve">
+    <value>panelCardAnimal</value>
   </data>
-  <data name="&gt;&gt;panelPioche.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;panelCardAnimal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panelPioche.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelCardAnimal.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelPioche.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="labelPioche.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelPioche.Location" type="System.Drawing.Point, System.Drawing">
-    <value>62, 219</value>
-  </data>
-  <data name="labelPioche.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 13</value>
-  </data>
-  <data name="labelPioche.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="labelPioche.Text" xml:space="preserve">
-    <value>labelPioche</value>
-  </data>
-  <data name="&gt;&gt;labelPioche.Name" xml:space="preserve">
-    <value>labelPioche</value>
-  </data>
-  <data name="&gt;&gt;labelPioche.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelPioche.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;labelPioche.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelScore4.Name" xml:space="preserve">
-    <value>labelScore4</value>
-  </data>
-  <data name="&gt;&gt;labelScore4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelScore4.Parent" xml:space="preserve">
-    <value>panelJoueur4</value>
-  </data>
-  <data name="&gt;&gt;labelScore4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur4.Name" xml:space="preserve">
-    <value>labelJoueur4</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur4.Parent" xml:space="preserve">
-    <value>panelJoueur4</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur4.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panelJoueur4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 338</value>
-  </data>
-  <data name="panelJoueur4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 82</value>
-  </data>
-  <data name="panelJoueur4.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;panelCardAnimal.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="&gt;&gt;panelJoueur4.Name" xml:space="preserve">
-    <value>panelJoueur4</value>
-  </data>
-  <data name="&gt;&gt;panelJoueur4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelJoueur4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelJoueur4.ZOrder" xml:space="preserve">
-    <value>11</value>
   </data>
   <data name="labelScore4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="labelScore4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt</value>
+  </data>
   <data name="labelScore4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 15</value>
+    <value>526, 37</value>
   </data>
   <data name="labelScore4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 13</value>
+    <value>23, 25</value>
   </data>
   <data name="labelScore4.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -238,91 +172,22 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelScore4.Parent" xml:space="preserve">
-    <value>panelJoueur4</value>
-  </data>
-  <data name="&gt;&gt;labelScore4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="labelJoueur4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelJoueur4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 35</value>
-  </data>
-  <data name="labelJoueur4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 13</value>
-  </data>
-  <data name="labelJoueur4.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="labelJoueur4.Text" xml:space="preserve">
-    <value>labelJoueur4</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur4.Name" xml:space="preserve">
-    <value>labelJoueur4</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur4.Parent" xml:space="preserve">
-    <value>panelJoueur4</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur4.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelScore1.Name" xml:space="preserve">
-    <value>labelScore1</value>
-  </data>
-  <data name="&gt;&gt;labelScore1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelScore1.Parent" xml:space="preserve">
-    <value>panelJoueur1</value>
-  </data>
-  <data name="&gt;&gt;labelScore1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur1.Name" xml:space="preserve">
-    <value>labelJoueur1</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur1.Parent" xml:space="preserve">
-    <value>panelJoueur1</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panelJoueur1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 565</value>
-  </data>
-  <data name="panelJoueur1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 82</value>
-  </data>
-  <data name="panelJoueur1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;panelJoueur1.Name" xml:space="preserve">
-    <value>panelJoueur1</value>
-  </data>
-  <data name="&gt;&gt;panelJoueur1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelJoueur1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelJoueur1.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="&gt;&gt;labelScore4.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="labelScore1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="labelScore1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt</value>
+  </data>
   <data name="labelScore1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 12</value>
+    <value>156, 222</value>
   </data>
   <data name="labelScore1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 13</value>
+    <value>23, 25</value>
   </data>
   <data name="labelScore1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -337,91 +202,22 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelScore1.Parent" xml:space="preserve">
-    <value>panelJoueur1</value>
-  </data>
-  <data name="&gt;&gt;labelScore1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="labelJoueur1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelJoueur1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 35</value>
-  </data>
-  <data name="labelJoueur1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 13</value>
-  </data>
-  <data name="labelJoueur1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="labelJoueur1.Text" xml:space="preserve">
-    <value>labelJoueur1</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur1.Name" xml:space="preserve">
-    <value>labelJoueur1</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur1.Parent" xml:space="preserve">
-    <value>panelJoueur1</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelScore3.Name" xml:space="preserve">
-    <value>labelScore3</value>
-  </data>
-  <data name="&gt;&gt;labelScore3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelScore3.Parent" xml:space="preserve">
-    <value>panelJoueur3</value>
-  </data>
-  <data name="&gt;&gt;labelScore3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur3.Name" xml:space="preserve">
-    <value>labelJoueur3</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur3.Parent" xml:space="preserve">
-    <value>panelJoueur3</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panelJoueur3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>553, 42</value>
-  </data>
-  <data name="panelJoueur3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 82</value>
-  </data>
-  <data name="panelJoueur3.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;panelJoueur3.Name" xml:space="preserve">
-    <value>panelJoueur3</value>
-  </data>
-  <data name="&gt;&gt;panelJoueur3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelJoueur3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelJoueur3.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="&gt;&gt;labelScore1.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="labelScore3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="labelScore3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt</value>
+  </data>
   <data name="labelScore3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 12</value>
+    <value>517, 560</value>
   </data>
   <data name="labelScore3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 13</value>
+    <value>23, 25</value>
   </data>
   <data name="labelScore3.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -436,91 +232,22 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelScore3.Parent" xml:space="preserve">
-    <value>panelJoueur3</value>
-  </data>
-  <data name="&gt;&gt;labelScore3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="labelJoueur3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelJoueur3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 35</value>
-  </data>
-  <data name="labelJoueur3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 13</value>
-  </data>
-  <data name="labelJoueur3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="labelJoueur3.Text" xml:space="preserve">
-    <value>labelJoueur3</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur3.Name" xml:space="preserve">
-    <value>labelJoueur3</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur3.Parent" xml:space="preserve">
-    <value>panelJoueur3</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelScore2.Name" xml:space="preserve">
-    <value>labelScore2</value>
-  </data>
-  <data name="&gt;&gt;labelScore2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelScore2.Parent" xml:space="preserve">
-    <value>panelJoueur2</value>
-  </data>
-  <data name="&gt;&gt;labelScore2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur2.Name" xml:space="preserve">
-    <value>labelJoueur2</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur2.Parent" xml:space="preserve">
-    <value>panelJoueur2</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panelJoueur2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>826, 338</value>
-  </data>
-  <data name="panelJoueur2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 82</value>
-  </data>
-  <data name="panelJoueur2.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;panelJoueur2.Name" xml:space="preserve">
-    <value>panelJoueur2</value>
-  </data>
-  <data name="&gt;&gt;panelJoueur2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelJoueur2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelJoueur2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;labelScore3.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="labelScore2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="labelScore2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt</value>
+  </data>
   <data name="labelScore2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 16</value>
+    <value>857, 154</value>
   </data>
   <data name="labelScore2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 13</value>
+    <value>23, 25</value>
   </data>
   <data name="labelScore2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -535,277 +262,13 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelScore2.Parent" xml:space="preserve">
-    <value>panelJoueur2</value>
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;labelScore2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="labelJoueur2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelJoueur2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 35</value>
-  </data>
-  <data name="labelJoueur2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 13</value>
-  </data>
-  <data name="labelJoueur2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="labelJoueur2.Text" xml:space="preserve">
-    <value>labelJoueur2</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur2.Name" xml:space="preserve">
-    <value>labelJoueur2</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur2.Parent" xml:space="preserve">
-    <value>panelJoueur2</value>
-  </data>
-  <data name="&gt;&gt;labelJoueur2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panelCarteJoue1</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panelCarteJoue1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>414, 492</value>
-  </data>
-  <data name="panelCarteJoue1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 168</value>
-  </data>
-  <data name="panelCarteJoue1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;panelCarteJoue1.Name" xml:space="preserve">
-    <value>panelCarteJoue1</value>
-  </data>
-  <data name="&gt;&gt;panelCarteJoue1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelCarteJoue1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelCarteJoue1.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 73</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panelCarteJoue1</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>panelCarteJoue2</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panelCarteJoue2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>608, 293</value>
-  </data>
-  <data name="panelCarteJoue2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 168</value>
-  </data>
-  <data name="panelCarteJoue2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;panelCarteJoue2.Name" xml:space="preserve">
-    <value>panelCarteJoue2</value>
-  </data>
-  <data name="&gt;&gt;panelCarteJoue2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelCarteJoue2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelCarteJoue2.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 73</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>panelCarteJoue2</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>panelCarteJoue3</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panelCarteJoue3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>414, 100</value>
-  </data>
-  <data name="panelCarteJoue3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 168</value>
-  </data>
-  <data name="panelCarteJoue3.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;panelCarteJoue3.Name" xml:space="preserve">
-    <value>panelCarteJoue3</value>
-  </data>
-  <data name="&gt;&gt;panelCarteJoue3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelCarteJoue3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelCarteJoue3.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 73</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>panelCarteJoue3</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>panelCarteJoue4</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panelCarteJoue4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 293</value>
-  </data>
-  <data name="panelCarteJoue4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 168</value>
-  </data>
-  <data name="panelCarteJoue4.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;panelCarteJoue4.Name" xml:space="preserve">
-    <value>panelCarteJoue4</value>
-  </data>
-  <data name="&gt;&gt;panelCarteJoue4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelCarteJoue4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelCarteJoue4.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 73</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>panelCarteJoue4</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="buttonPlay.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="buttonPlay.Location" type="System.Drawing.Point, System.Drawing">
     <value>778, 42</value>
@@ -817,7 +280,7 @@
     <value>6</value>
   </data>
   <data name="buttonPlay.Text" xml:space="preserve">
-    <value>Jouer !</value>
+    <value>Jouer le tour</value>
   </data>
   <data name="&gt;&gt;buttonPlay.Name" xml:space="preserve">
     <value>buttonPlay</value>
@@ -829,7 +292,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonPlay.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>10</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
     <value>767, 12</value>
@@ -853,33 +316,114 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>9</value>
   </data>
-  <data name="panelCardAnimal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="panelCarteJoue1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="panelCardAnimal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>427, 293</value>
+  <data name="panelCarteJoue1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>276, 271</value>
   </data>
-  <data name="panelCardAnimal.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelCarteJoue1.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 168</value>
   </data>
-  <data name="panelCardAnimal.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="panelCarteJoue1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
-  <data name="panelCardAnimal.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="panelCarteJoue1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
-  <data name="&gt;&gt;panelCardAnimal.Name" xml:space="preserve">
-    <value>panelCardAnimal</value>
+  <data name="&gt;&gt;panelCarteJoue1.Name" xml:space="preserve">
+    <value>panelCarteJoue1</value>
   </data>
-  <data name="&gt;&gt;panelCardAnimal.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelCarteJoue1.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panelCardAnimal.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelCarteJoue1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelCardAnimal.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelCarteJoue1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panelCarteJoue3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="panelCarteJoue3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>428, 362</value>
+  </data>
+  <data name="panelCarteJoue3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 168</value>
+  </data>
+  <data name="panelCarteJoue3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="panelCarteJoue3.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;panelCarteJoue3.Name" xml:space="preserve">
+    <value>panelCarteJoue3</value>
+  </data>
+  <data name="&gt;&gt;panelCarteJoue3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelCarteJoue3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelCarteJoue3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panelCarteJoue2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="panelCarteJoue2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>577, 271</value>
+  </data>
+  <data name="panelCarteJoue2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 168</value>
+  </data>
+  <data name="panelCarteJoue2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="panelCarteJoue2.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;panelCarteJoue2.Name" xml:space="preserve">
+    <value>panelCarteJoue2</value>
+  </data>
+  <data name="&gt;&gt;panelCarteJoue2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelCarteJoue2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelCarteJoue2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelCarteJoue4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="panelCarteJoue4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>428, 176</value>
+  </data>
+  <data name="panelCarteJoue4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 168</value>
+  </data>
+  <data name="panelCarteJoue4.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="panelCarteJoue4.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;panelCarteJoue4.Name" xml:space="preserve">
+    <value>panelCarteJoue4</value>
+  </data>
+  <data name="&gt;&gt;panelCarteJoue4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelCarteJoue4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelCarteJoue4.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -892,7 +436,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1008, 661</value>
+    <value>906, 652</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
