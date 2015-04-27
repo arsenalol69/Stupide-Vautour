@@ -33,11 +33,9 @@ namespace Stupide_Vautour
             //Ajout des joueurs
             players = new List<Player>();
             players.Add(new Human());
+            players.Add(new MediumSmart());
             players.Add(new Human());
             players.Add(new Human());
-            players.Add(new Human());
-            //Création du board
-            board = new Board(players, piocheAnimal);
             //Label des scores
             labelScore = new List<Label>();
             labelScore.Add(labelScore1);
@@ -45,6 +43,8 @@ namespace Stupide_Vautour
             labelScore.Add(labelScore3);
             labelScore.Add(labelScore4);
             piocheAnimal = new Stack(false);
+            //Création du board
+            board = new Board(players, piocheAnimal);
             //Carte de jeu
             panelChoice = new List<PictureBox>();
             panelChoice.Add(panelCarteJoue1);
@@ -68,6 +68,18 @@ namespace Stupide_Vautour
                 {
                     int choix = getChoice(players[i]);
                     choiceRoundCard.Add(players[i].getHand().pickCard(choix));
+                }
+                else if (players[i] is MediumSmart)
+                {
+                    if (board.getLastTurn() == null)
+                    { //le 1er tour lastTurn est null
+                        choiceRoundCard.Add(players[i].play(animalCard, new Turn(players, animalCard, piocheAnimal)));
+                    }
+                    else
+                    {
+                        choiceRoundCard.Add(players[i].play(animalCard, board.getLastTurn()));
+                    }
+                    
                 }
             }
             for (int i =0; i<players.Count;i++)

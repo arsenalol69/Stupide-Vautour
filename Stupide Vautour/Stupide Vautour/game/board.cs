@@ -177,6 +177,19 @@ namespace Stupide_Vautour.game
                 cancelCards(cards, val);
         }
 
+        public Turn getLastTurn()
+        {
+            try
+            {
+                return history[history.Count - 1];
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            
+        }
+
 
     }
 }
