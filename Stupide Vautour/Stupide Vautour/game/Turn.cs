@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Stupide_Vautour.game
 {
-    class Turn
+    public class Turn
     {
         Card animalCarte;
         List<Player> players;

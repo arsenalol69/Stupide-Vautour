@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Stupide_Vautour.game
 {
-    class Stroke
+    public class Stroke
     {
         Player player;
         Card playerCard;
