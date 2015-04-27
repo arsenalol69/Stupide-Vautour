@@ -37,5 +37,16 @@ namespace Stupide_Vautour.game
         {
             return "Carte " + force + " de type " + (type==ANIMAL ? "Animal" : "Joueur");
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Card)
+            {
+                Card c = (Card)obj;
+                if (c.Force == Force && c.Type == Type) return true;
+                else return false;
+            }
+            else return false;
+        }
     }
 }

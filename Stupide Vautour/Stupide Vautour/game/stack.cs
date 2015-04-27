@@ -67,6 +67,14 @@ namespace Stupide_Vautour.game
             return cardStack.Count;
         }
 
+        public int findPositionCard(Card c)
+        {
+            for (int i=0; i< getSize(); i++)
+            {
+                if (cardStack[i].Equals(c)) return i;
+            }
+            return -1;
+        }
 
     }
 }

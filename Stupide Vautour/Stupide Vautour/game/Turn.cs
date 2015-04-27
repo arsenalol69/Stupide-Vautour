@@ -9,14 +9,25 @@ namespace Stupide_Vautour.game
 {
     class Turn
     {
-        Card animal;
+        Card animalCarte;
         List<Player> players;
 
         public Turn(List<Player> players, Card animal)
         {
             this.players = players;
-            this.animal = animal;
+            this.animalCarte = animal;
         }
 
+        public Card AnimalCarte
+        {
+            get { return animalCarte; }
+            set { animalCarte = value; }
+        }
+
+        public List<Player> Players
+        {
+            get { return players; }
+            set { players = value; }
+        }
     }
 }
