@@ -19,15 +19,27 @@ namespace Stupide_Vautour.players
 
         public override Card play(Card animal)
         {
+            
+            
             return myCards.getRandomCard();
         } 
+
+        public int carteGagnee(int probabilite, Turn t)
+        {
+            for (int i = 0; i < myCards.getSize(); i++)
+            {
+
+            }
+
+                return 0;
+        }
 
         /// <summary>
         /// Calcule les chances qu'un coup soit utilisé par un joueur
         /// </summary>
         /// <param name="coups">Objet de type Stroke contenant la carte joué et le joueur qui la joue et la pioche</param>
         /// <returns>Entier compris entre 0 et 1 qui reprèsent la probabilité que le coups soit joué</returns>
-        public int chanceDetreUtilise(Turn t, Stroke coups, Stack pioche)
+        protected int chanceDetreUtilise(Turn t, Stroke coups, Stack pioche)
         {
             int valeurCarte = getValeurCarte(coups);
             int valeurPioche = getValeurCartePioche(coups.AnimalCard, pioche);
@@ -37,7 +49,7 @@ namespace Stupide_Vautour.players
             
         }
 
-        public int getPositionJoueur(Turn t, Player P)
+        protected int getPositionJoueur(Turn t, Player P)
         {
             int scoreMax = t.Players[0].Score;
             for (int i =0; i<t.Players.Count; i++)
@@ -47,7 +59,7 @@ namespace Stupide_Vautour.players
             return P.Score/scoreMax;
         }
 
-        public bool isFirst(List<Player> pList, Player player)
+        protected bool isFirst(List<Player> pList, Player player)
         {
             int maxScore = pList[0].Score;
             for(int i = 1; i<pList.Count; i++)
@@ -58,7 +70,7 @@ namespace Stupide_Vautour.players
             else return false;
         }
 
-        public bool isLast(List<Player> pList, Player player)
+        protected bool isLast(List<Player> pList, Player player)
         {
             int min = pList[0].Score;
             for (int i = 1; i < pList.Count; i++)
@@ -74,7 +86,7 @@ namespace Stupide_Vautour.players
         /// </summary>
         /// <param name="coups">Objet de type Turn contenant la carte joué et le joueur qui la joue et la carte piochée</param>
         /// <returns>Entier représentant la valeur de la carte</returns>
-        public int getValeurCarte(Stroke coup)
+        protected int getValeurCarte(Stroke coup)
         {
             int force = coup.PlayerCard.Force; //Force de la carte
             int posMain = coup.Player.getHand().findPositionCard(coup.PlayerCard); //Position de la carte dans la main du joueur
@@ -87,7 +99,7 @@ namespace Stupide_Vautour.players
         /// </summary>
         /// <param name="coups">Objet de type Turn contenant la carte joué et le joueur qui la joue et la carte piochée</param>
         /// <returns>Entier représentant la valeur de la carte</returns>
-        public int getValeurCartePioche(Card carte, Stack pioche)
+        protected int getValeurCartePioche(Card carte, Stack pioche)
         {
             int force;
             if (carte.Force > 0) force = carte.Force;
