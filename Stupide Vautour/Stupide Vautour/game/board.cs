@@ -31,14 +31,28 @@ namespace Stupide_Vautour.game
             if (animal.Force > 0)
             {
                 int max = maxCard(new List<Card>(cardsPlayed));
-                if (max>=0)
-                    players[max].addScore(animal.Force);
+                if (max >= 0)
+                {
+                    for (int i = 0; i < players.Count; i++)
+                    {
+                        if (cardsPlayed[i].Force == max)
+                            players[i].addScore(animal.Force);
+                    }
+                }
+                    
             }
             else
             {
                 int min = minCard(new List<Card>(cardsPlayed));
                 if (min >= 0)
-                    players[min].addScore(animal.Force);
+                {
+                    for (int i = 0; i < players.Count; i++)
+                    {
+                        if (cardsPlayed[i].Force == min)
+                            players[i].addScore(animal.Force);
+                    }
+                }
+                    
             }
 
             history.Add(new Turn(new List<Player>(players), animal));
@@ -67,9 +81,12 @@ namespace Stupide_Vautour.game
 
             }
 
-            return min;
+            return val_min;
 
          }
+
+
+        
 
         private int maxCard(List<Card> cards)
         {
@@ -93,7 +110,7 @@ namespace Stupide_Vautour.game
 
             }
 
-            return max;
+            return val_max;
 
         }
 
@@ -123,15 +140,19 @@ namespace Stupide_Vautour.game
 
         private void cancelCards(List<Card> cards, int val)
         {
+            bool eltRemoved = false;
             foreach (Card c in cards)
             {
                 if (c.Force == val)
                 {
                     cards.Remove(c);
-                    
+                    eltRemoved = true;
+                    break;
                 }
                     
             }
+            if (eltRemoved)
+                cancelCards(cards, val);
         }
 
 
