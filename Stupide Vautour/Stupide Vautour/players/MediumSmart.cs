@@ -14,18 +14,13 @@ namespace Stupide_Vautour.players
 
         }
 
-        public override Card play(Card animal)
+        public override Card play(Card animal, Turn lastTurn)
         {
+            int valeurPioche = getValeurCartePioche(animal, lastTurn.Pioche) * 10;
 
             
             return myCards.getRandomCard();
         }
 
-        public override Card play(Card cardAnimal, Stack pioche)
-        {
-            int valeurPioche = getValeurCartePioche(cardAnimal, pioche) * 10;
-
-            //return myCards.getRandomCard();
-        }
     }
 }

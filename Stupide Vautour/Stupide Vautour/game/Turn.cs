@@ -11,11 +11,13 @@ namespace Stupide_Vautour.game
     {
         Card animalCarte;
         List<Player> players;
+        Stack pioche;
 
-        public Turn(List<Player> players, Card animal)
+        public Turn(List<Player> players, Card animal, Stack pioche)
         {
             this.players = players;
             this.animalCarte = animal;
+            this.pioche = pioche;
         }
 
         public Card AnimalCarte
@@ -28,6 +30,12 @@ namespace Stupide_Vautour.game
         {
             get { return players; }
             set { players = value; }
+        }
+
+        public Stack Pioche
+        {
+            get { return pioche; }
+            set { pioche = value; }
         }
     }
 }

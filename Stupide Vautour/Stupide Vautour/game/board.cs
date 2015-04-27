@@ -12,21 +12,44 @@ namespace Stupide_Vautour.game
     {
 
         List<Turn> history;
-        Stack stack;
+        Stack pioche;
         List<Player> players;
 
-        public Board(List<Player> listPlayers)
+        public Board(List<Player> listPlayers, Stack pioche)
         {
             history = new List<Turn>();
-            stack = new Stack(false);
+            this.pioche = pioche;
             players = listPlayers;  
         }
 
         public void play(List<Card> cardsPlayed, Card animal)
         {
 
-                  
+            int winner = getWinner(cardsPlayed, animal);     
 
+
+            for (int i = 0; i < players.Count; i++)
+            {
+                if (cardsPlayed[i].Force == winner)
+                    players[i].addScore(animal.Force);
+            }
+           
+
+            history.Add(new Turn(new List<Player>(players), animal, pioche));
+                
+
+        }
+
+        /// <summary>
+        /// Retourne le gagnant pour les cartes jouées données en paramètre 
+        /// </summary>
+        /// <param name="cardsPlayed">Les cartes jouées</param>
+        /// <param name="animal">La carte animal tirée</param>
+        /// <returns>Le valeur de la carte gagnante et -1 s'il n'y a pas de gagnant</returns>
+        public int getWinner(List<Card> cardsPlayed, Card animal)
+        {
+
+            int winner = -1;
 
             if (animal.Force > 0)
             {
@@ -36,10 +59,10 @@ namespace Stupide_Vautour.game
                     for (int i = 0; i < players.Count; i++)
                     {
                         if (cardsPlayed[i].Force == max)
-                            players[i].addScore(animal.Force);
+                            return max;
                     }
                 }
-                    
+
             }
             else
             {
@@ -49,16 +72,15 @@ namespace Stupide_Vautour.game
                     for (int i = 0; i < players.Count; i++)
                     {
                         if (cardsPlayed[i].Force == min)
-                            players[i].addScore(animal.Force);
+                            return min;
                     }
                 }
-                    
+
             }
 
-            history.Add(new Turn(new List<Player>(players), animal));
-                
-
+            return winner;
         }
+
 
         private int minCard(List<Card> cards){
 

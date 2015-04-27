@@ -24,6 +24,11 @@ namespace Stupide_Vautour.game
             }
         }
 
+        public Stack(Stack piocheCopie)
+        {
+            cardStack = new List<Card>(piocheCopie.cardStack);
+        }
+
         public void initializeStack(Boolean isPlayer)
         {
             cardStack.Clear();

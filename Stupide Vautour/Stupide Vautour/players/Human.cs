@@ -14,16 +14,8 @@ namespace Stupide_Vautour.players
             
         }
 
-         public override Card play(Card animal)
-         {
-             //Afficher cartes
-             int cardToPlay;
-             Console.WriteLine("Which card do you want to play ?");
-             String txt = " ";
-             txt = Console.In.ReadLine();
-             cardToPlay = Convert.ToInt32(txt);
-             return myCards.getCards()[cardToPlay];
-         } 
+         public override Card play(Card animal, Turn t) { return null; }
+         
     }
    
 }

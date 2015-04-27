@@ -37,7 +37,7 @@ namespace Stupide_Vautour
             players.Add(new Human());
             players.Add(new Human());
             //Création du board
-            board = new Board(players);
+            board = new Board(players, piocheAnimal);
             //Label des scores
             labelScore = new List<Label>();
             labelScore.Add(labelScore1);
