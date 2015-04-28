@@ -14,7 +14,7 @@ namespace Stupide_Vautour.players
             
         }
 
-         public override Card play(Card animal, Turn t, Board board) { return null; }
+         public override Card play(Turn t, Board board) { return null; }
          
     }
    

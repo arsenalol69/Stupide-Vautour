@@ -16,10 +16,11 @@ namespace Stupide_Vautour.players
 
         protected Player()
         {
-            lastNumeroPlayer++;
-            numeroPlayer = lastNumeroPlayer;
+            
+            numeroPlayer = lastNumeroPlayer++;
             score = 0;
             myCards = new Stack(true);
+            
         }
 
 
@@ -32,7 +33,7 @@ namespace Stupide_Vautour.players
         public void addScore(int scoreToAdd){
             score += scoreToAdd;
         }
-        public abstract Card play(Card animal, Turn lastTurn, Board board);
+        public abstract Card play(Turn lastTurn, Board board);
 
         public Stack getHand()
         {

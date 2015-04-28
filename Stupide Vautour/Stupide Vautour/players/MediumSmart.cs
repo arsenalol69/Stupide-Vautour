@@ -14,10 +14,10 @@ namespace Stupide_Vautour.players
 
         }
 
-        public override Card play(Card animal, Turn lastTurn, Board board)
+        public override Card play(Turn lastTurn, Board board)
         {
 
-                double valeurPioche = getValeurCartePioche(animal, lastTurn.Pioche);
+                double valeurPioche = getValeurCartePioche(lastTurn.AnimalCarte, lastTurn.Pioche);
                 int indIdealCard = (int)(lastTurn.Pioche.getSize() * valeurPioche);
                 int indCardToPlay = getRandomGaussian(indIdealCard);
 

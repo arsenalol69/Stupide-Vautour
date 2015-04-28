@@ -17,15 +17,15 @@ namespace Stupide_Vautour.players
 
         }
 
-        public override Card play(Card animal, Turn t, Board board)
+        public override Card play(Turn t, Board board)
         {
             return bestCard(t, board);
         }
 
-        protected double[] bestCard2(Turn t, Board board, Player p, List<Card> playedCard, double[] proba)
+        protected double[] bestCard2(Turn t, Board board, Player p, Card[] playedCard, double[] proba)
         {
             
-            if(playedCard[t.Players.Count-1]!=null)
+            if(playedCard[(numeroPlayer-1)%playedCard.Length]!=null)
             {
                 return calculProbaCoups(playedCard, t, board, proba);
             }
@@ -34,7 +34,7 @@ namespace Stupide_Vautour.players
                 
                 for (int i =0; i<p.getHand().getSize(); i++)
                 {
-                    playedCard[i]=(p.getHand().getCard(i));
+                    playedCard[p.getNumeroPlayer()]=(p.getHand().getCard(i));
                     proba = bestCard2(t, board, t.Players[(p.getNumeroPlayer()+1)%t.Players.Count], playedCard, proba);
                 }
                 return proba;
@@ -48,7 +48,7 @@ namespace Stupide_Vautour.players
             probMax[1] = -1; //Somme de toutes les probabilités
             for (int i = 0; i < getHand().getSize(); i++)
             {
-                List<Card> playerCard = new List<Card>(t.Players.Count);
+                Card[] playerCard = new Card[t.Players.Count];
                 double[] prob = new double[2];
                 prob[0] = 0; 
                 prob[1] = 0; 
@@ -64,13 +64,13 @@ namespace Stupide_Vautour.players
             return getHand().getCard(indBestCard);
         }
 
-        protected double[] calculProbaCoups(List<Card> playerCards, Turn t, Board board, double[] prob)
+        protected double[] calculProbaCoups(Card[] playerCards, Turn t, Board board, double[] prob)
         {
-            int winnerCard = board.getWinner(playerCards, t.AnimalCarte);
-            int indWinner = 0;
+            int winnerCard = board.getWinner(new List<Card>(playerCards), t.AnimalCarte);
+            int indWinner = -1;
             double pCoups = 1;
             double[] p = new double[2];
-            for (int i = 0; i < playerCards.Count; i++) if (playerCards[i].Force == winnerCard) indWinner = i;
+            for (int i = 0; i < playerCards.Length; i++) if (playerCards[i].Force == winnerCard) indWinner = i;
                 for (int i = 0; i < t.Players.Count; i++ )
                 {
                     if (i!=numeroPlayer)
@@ -110,7 +110,7 @@ namespace Stupide_Vautour.players
             {
                 if (t.Players[i].Score > scoreMax) scoreMax = t.Players[0].Score;
             }
-            return P.Score/scoreMax;
+            return scoreMax==0 ? 0.001 : P.Score/scoreMax;
         }
 
         protected bool isFirst(List<Player> pList, Player player)
@@ -142,9 +142,9 @@ namespace Stupide_Vautour.players
         /// <returns>Entier représentant la valeur de la carte</returns>
         protected double getValeurCarte(Stroke coup)
         {
-            int force = coup.PlayerCard.Force; //Force de la carte
+            double force = coup.PlayerCard.Force; //Force de la carte
             int posMain = coup.Player.getHand().findPositionCard(coup.PlayerCard); //Position de la carte dans la main du joueur
-            force = force * (posMain / coup.Player.getHand().getSize()); //Force recalculée par rapport par rapport à la position
+            force = (force * posMain) / coup.Player.getHand().getSize(); //Force recalculée par rapport par rapport à la position
             return force;
         }
 
