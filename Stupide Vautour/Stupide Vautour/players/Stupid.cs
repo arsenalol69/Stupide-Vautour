@@ -17,7 +17,7 @@ namespace Stupide_Vautour.players
 
         }
 
-        public override Card play(Turn t, Board board)
+        public override Card play(Card animal, Turn t, Board board)
         {
             return bestCard(t, board);
         }

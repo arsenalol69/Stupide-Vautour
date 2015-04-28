@@ -14,20 +14,15 @@ namespace Stupide_Vautour.players
 
         }
 
-        public override Card play(Card animal, Turn lastTurn)
+        public override Card play(Card animal, Turn lastTurn, Board board)
         {
-            if (lastTurn != null)
-            {
+
                 double valeurPioche = getValeurCartePioche(animal, lastTurn.Pioche);
                 int indIdealCard = (int)(lastTurn.Pioche.getSize() * valeurPioche);
                 int indCardToPlay = getRandomGaussian(indIdealCard);
 
                 return myCards.pickCard(indCardToPlay);
-            }
-            else //le premier Tour lastTurn sera nul 
-            {
-                return base.play(animal, lastTurn);
-            }
+           
             
         }
 

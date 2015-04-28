@@ -32,7 +32,7 @@ namespace Stupide_Vautour.players
         public void addScore(int scoreToAdd){
             score += scoreToAdd;
         }
-        public abstract Card play(Card animal, Turn lastTurn);
+        public abstract Card play(Card animal, Turn lastTurn, Board board);
 
         public Stack getHand()
         {

@@ -72,7 +72,7 @@ namespace Stupide_Vautour
                 else
                 {
                     
-                     choiceRoundCard.Add(players[i].play(animalCard, board.getLastTurn()));
+                     choiceRoundCard.Add(players[i].play(animalCard, board.getLastTurn(), board));
                     
                 }
             }
