@@ -19,13 +19,14 @@ namespace Stupide_Vautour.game
         {
             history = new List<Turn>();
             this.pioche = pioche;
-            players = listPlayers;  
+            players = listPlayers;
+            reset();
         }
 
         public void play(List<Card> cardsPlayed, Card animal)
         {
 
-            int winner = getWinner(cardsPlayed, animal);     
+            int winner = getWinner(new List<Card>(cardsPlayed), animal);     
 
 
             for (int i = 0; i < players.Count; i++)
@@ -185,11 +186,18 @@ namespace Stupide_Vautour.game
             }
             catch (Exception ex)
             {
+                Console.WriteLine("Erreur ! Bord.getLastTurn()");
                 return null;
             }
             
         }
 
 
+
+        public void reset()
+        {
+            history.Clear();
+            history.Add(new Turn(players, null, pioche));
+        }
     }
 }

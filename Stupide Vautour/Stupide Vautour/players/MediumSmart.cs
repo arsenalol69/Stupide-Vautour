@@ -38,10 +38,10 @@ namespace Stupide_Vautour.players
             double u2 = rand.NextDouble();
             double randStdNormal = Math.Sqrt(-2.0 * Math.Log(u1)) *
                          Math.Sin(2.0 * Math.PI * u2); //random normal(0,1)
-            int stdDev = 1;
+            double stdDev = 1;
             double randNormal =
                          nb + stdDev * randStdNormal; //random normal(mean,stdDev^2)
-            return (int)randNormal;
+            return (int)Math.Round(randNormal, 0);
         }
     }
 }

@@ -69,16 +69,10 @@ namespace Stupide_Vautour
                     int choix = getChoice(players[i]);
                     choiceRoundCard.Add(players[i].getHand().pickCard(choix));
                 }
-                else if (players[i] is MediumSmart)
+                else
                 {
-                    if (board.getLastTurn() == null)
-                    { //le 1er tour lastTurn est null
-                        choiceRoundCard.Add(players[i].play(animalCard, new Turn(players, animalCard, piocheAnimal)));
-                    }
-                    else
-                    {
-                        choiceRoundCard.Add(players[i].play(animalCard, board.getLastTurn()));
-                    }
+                    
+                     choiceRoundCard.Add(players[i].play(animalCard, board.getLastTurn()));
                     
                 }
             }
@@ -121,6 +115,7 @@ namespace Stupide_Vautour
             updateViewPlayers();
             piocher();
             buttonPlay.Enabled = true;
+            board.reset();
            
         }
 
