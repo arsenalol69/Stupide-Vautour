@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Stupide_Vautour.game
 {
-    class Board
+    public class Board
     {
 
         List<Turn> history;

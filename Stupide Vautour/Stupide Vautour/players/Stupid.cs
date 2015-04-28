@@ -17,64 +17,74 @@ namespace Stupide_Vautour.players
 
         }
 
-        public override Card play(Card animal, Turn t)
+        public override Card play(Turn t, Board board)
         {
-            return myCards.getRandomCard();
-        } 
-
-        public Card bestCard(Turn t, Board board)
-        {
-            List<Card> playerCard = new List<Card>(t.Players.Count);
-            int indPlayer2 = (numeroPlayer + 1) % t.Players.Count;
-            for (int i = 0; i < t.Players[numeroPlayer].getHand().getSize(); i++)
-            {
-                playerCard[numeroPlayer] = getHand().getCard(i);
-                for (int j=0; j<t.Players[indPlayer2].getHand().getSize(); j++)
-                {
-                    playerCard[indPlayer2] = getHand().getCard(j);
-                    if (t.Players.Count >= 3)
-                    {
-                        int indPlayer3 = (numeroPlayer + 2) % t.Players.Count;
-                        for (int k = 0; k < t.Players[indPlayer3].getHand().getSize(); k++)
-                        {
-                            playerCard[indPlayer3] = getHand().getCard(k);
-                            if (t.Players.Count >= 4)
-                            {
-                                int indPlayer4 = (numeroPlayer + 3) % t.Players.Count;
-                                for (int l = 0; l < t.Players[indPlayer4].getHand().getSize(); l++)
-                                {
-                                    //test de gagne (à metttre dans les else aussi...
-                                    playerCard[indPlayer4] = getHand().getCard(l);
-                                    double p = calculProbaCoups(playerCard, t, board);
-
-                                }
-                            }
-                        }
-                    }           
-                }
-            }
-            return null;
+            return bestCard(t, board);
         }
 
-        protected double calculProbaCoups(List<Card> playerCards, Turn t, Board board)
+        protected double[] bestCard2(Turn t, Board board, Player p, List<Card> playedCard, double[] proba)
+        {
+            
+            if(playedCard[t.Players.Count-1]!=null)
+            {
+                return calculProbaCoups(playedCard, t, board, proba);
+            }
+            else
+            {
+                
+                for (int i =0; i<p.getHand().getSize(); i++)
+                {
+                    playedCard[i]=(p.getHand().getCard(i));
+                    proba = bestCard2(t, board, t.Players[(p.getNumeroPlayer()+1)%t.Players.Count], playedCard, proba);
+                }
+                return proba;
+            }
+        }
+        public Card bestCard(Turn t, Board board)
+        {
+            double[] probMax = new double[2];
+            int indBestCard = 0;
+            probMax[0] = 0; //Somme des probabilité de victoire
+            probMax[1] = -1; //Somme de toutes les probabilités
+            for (int i = 0; i < getHand().getSize(); i++)
+            {
+                List<Card> playerCard = new List<Card>(t.Players.Count);
+                double[] prob = new double[2];
+                prob[0] = 0; 
+                prob[1] = 0; 
+                playerCard[numeroPlayer] = getHand().getCard(i);
+                double[] p = bestCard2(t, board, this, playerCard,prob);
+                if (prob[1]!=0 && prob[0] / prob[1] > probMax[0] / probMax[1])
+                {
+                    probMax[0] = prob[0];
+                    probMax[1] = prob[1];
+                    indBestCard = i;
+                }
+            }
+            return getHand().getCard(indBestCard);
+        }
+
+        protected double[] calculProbaCoups(List<Card> playerCards, Turn t, Board board, double[] prob)
         {
             int winnerCard = board.getWinner(playerCards, t.AnimalCarte);
             int indWinner = 0;
-            double p = 1;
+            double pCoups = 1;
+            double[] p = new double[2];
             for (int i = 0; i < playerCards.Count; i++) if (playerCards[i].Force == winnerCard) indWinner = i;
                 for (int i = 0; i < t.Players.Count; i++ )
                 {
                     if (i!=numeroPlayer)
                     {
-                        p *= chanceDetreUtilise(t, new Stroke(t.Players[i], playerCards[i], t.AnimalCarte));
+                        pCoups *= chanceDetreUtilise(t, new Stroke(t.Players[i], playerCards[i], t.AnimalCarte));
                     }
                 }
 
                 if (indWinner == numeroPlayer)
                 {
-                    return p;
+                    p[0] = pCoups+prob[0];
                 }
-                else return -p;
+                p[1] = prob[1] + pCoups;
+                return p;
             
         }
 
