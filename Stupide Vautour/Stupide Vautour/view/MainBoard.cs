@@ -33,7 +33,7 @@ namespace Stupide_Vautour
             //Ajout des joueurs
             players = new List<Player>();
             players.Add(new Human());
-            players.Add(new Stupid());
+            players.Add(new MediumSmart());
             //players.Add(new Human());
             //players.Add(new Human());
             //Label des scores
@@ -84,6 +84,7 @@ namespace Stupide_Vautour
             board.play(choiceRoundCard, animalCard);
             System.Threading.Thread.Sleep(5000);
             updateViewPlayers();
+            piocheAnimal.pickCard(piocheAnimal.findPositionCard(animalCard));
             piocher();
         }
 

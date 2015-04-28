@@ -155,20 +155,33 @@ namespace Stupide_Vautour.players
         /// <returns>Entier représentant la valeur de la carte</returns>
         protected double getValeurCartePioche(Card carte, Stack pioche)
         {
-            int force;
-            if (carte.Force > 0) force = carte.Force;
-            else force = Math.Abs(carte.Force)*2;
-            int posPioche = pioche.findPositionCard(carte);
-            force = force * (posPioche / pioche.getSize());
+            double force=0;
+            double valeurCarte= carte.Force < 0 ? carte.Force * -2 :  carte.Force;
+            List<Double> listPiocheValeur = new List<Double>();
+            for (int i=0; i<pioche.getCards().Count();i++){
+                force = pioche.getCards()[i].Force;
+                if (force < 0){
+                    force = Math.Abs(force) * 2;
+                }
+                listPiocheValeur.Add(force);
+            }
+            listPiocheValeur.Sort();
+
+            int posPioche = listPiocheValeur.IndexOf(valeurCarte)+1;
+            
+             // correspond à la postition partant de -5 à 10
+            force = force * ((double)posPioche / (double)listPiocheValeur.Count()); //utile pour faire par exemple posPioche=15 et pioche.getSize()=15 !
             return force/getForceMax(pioche);
         }
 
         private int getForceMax(Stack pioche)
         {
-            int forceMax = pioche.getCard(0).Force;
+            int valeur = pioche.getCard(0).Force < 0 ? pioche.getCard(0).Force * -2 : pioche.getCard(0).Force;
+            int forceMax = valeur;
             for (int i=1; i<pioche.getSize(); i++)
             {
-                if (pioche.getCard(i).Force > forceMax) forceMax = pioche.getCard(i).Force ;
+                valeur = pioche.getCard(i).Force < 0 ? pioche.getCard(i).Force * -2 : pioche.getCard(i).Force;
+                if (valeur > forceMax) forceMax = valeur ;
             }
             return forceMax;
         }

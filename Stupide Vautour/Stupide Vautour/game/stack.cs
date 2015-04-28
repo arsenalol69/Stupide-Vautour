@@ -51,7 +51,7 @@ namespace Stupide_Vautour.game
         public Card getRandomCard()
         {
             int indice = random.Next(cardStack.Count);
-            return pickCard(indice);
+            return cardStack[indice];//pickCard(indice);
             
         }
 
