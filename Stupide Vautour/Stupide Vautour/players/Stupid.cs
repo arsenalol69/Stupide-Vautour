@@ -22,28 +22,60 @@ namespace Stupide_Vautour.players
             return myCards.getRandomCard();
         } 
 
-        public int carteGagnee(Card c, Turn t)
+        public Card bestCard(Turn t, Board board)
         {
-            for (int i = 0; i < t.Players[0].getHand().getSize(); i++)
+            List<Card> playerCard = new List<Card>(t.Players.Count);
+            int indPlayer2 = (numeroPlayer + 1) % t.Players.Count;
+            for (int i = 0; i < t.Players[numeroPlayer].getHand().getSize(); i++)
             {
-                for (int j=0; j<t.Players[1].getHand().getSize(); j++)
+                playerCard[numeroPlayer] = getHand().getCard(i);
+                for (int j=0; j<t.Players[indPlayer2].getHand().getSize(); j++)
                 {
+                    playerCard[indPlayer2] = getHand().getCard(j);
                     if (t.Players.Count >= 3)
                     {
-                        for (int k = 0; k < t.Players[2].getHand().getSize(); k++)
+                        int indPlayer3 = (numeroPlayer + 2) % t.Players.Count;
+                        for (int k = 0; k < t.Players[indPlayer3].getHand().getSize(); k++)
                         {
+                            playerCard[indPlayer3] = getHand().getCard(k);
                             if (t.Players.Count >= 4)
                             {
-                                for (int l = 0; l < t.Players[2].getHand().getSize(); l++)
+                                int indPlayer4 = (numeroPlayer + 3) % t.Players.Count;
+                                for (int l = 0; l < t.Players[indPlayer4].getHand().getSize(); l++)
                                 {
                                     //test de gagne (à metttre dans les else aussi...
+                                    playerCard[indPlayer4] = getHand().getCard(l);
+                                    double p = calculProbaCoups(playerCard, t, board);
+
                                 }
                             }
                         }
                     }           
                 }
             }
-            return 0;
+            return null;
+        }
+
+        protected double calculProbaCoups(List<Card> playerCards, Turn t, Board board)
+        {
+            int winnerCard = board.getWinner(playerCards, t.AnimalCarte);
+            int indWinner = 0;
+            double p = 1;
+            for (int i = 0; i < playerCards.Count; i++) if (playerCards[i].Force == winnerCard) indWinner = i;
+                for (int i = 0; i < t.Players.Count; i++ )
+                {
+                    if (i!=numeroPlayer)
+                    {
+                        p *= chanceDetreUtilise(t, new Stroke(t.Players[i], playerCards[i], t.AnimalCarte));
+                    }
+                }
+
+                if (indWinner == numeroPlayer)
+                {
+                    return p;
+                }
+                else return -p;
+            
         }
 
         /// <summary>
@@ -51,10 +83,10 @@ namespace Stupide_Vautour.players
         /// </summary>
         /// <param name="coups">Objet de type Stroke contenant la carte joué et le joueur qui la joue et la pioche</param>
         /// <returns>Entier compris entre 0 et 1 qui reprèsent la probabilité que le coups soit joué</returns>
-        protected double chanceDetreUtilise(Turn t, Stroke coups, Stack pioche)
+        protected double chanceDetreUtilise(Turn t, Stroke coups)
         {
             double valeurCarte = getValeurCarte(coups);
-            double valeurPioche = getValeurCartePioche(coups.AnimalCard, pioche);
+            double valeurPioche = getValeurCartePioche(coups.AnimalCard, t.Pioche);
             double valeurJoueur = getPositionJoueur(t, coups.Player); //plus le joueur a peu de points, plus son comportement est offensive
             double proximiteCoups = 1-Math.Abs(valeurCarte - valeurPioche) / valeurPioche; //Plus la var est grande plus le coups est proche de la carte Animal
             return proximiteCoups*(1-valeurJoueur);
@@ -123,10 +155,10 @@ namespace Stupide_Vautour.players
 
         private int getForceMax(Stack pioche)
         {
-            int forceMax = pioche.pickCard(0).Force;
+            int forceMax = pioche.getCard(0).Force;
             for (int i=1; i<pioche.getSize(); i++)
             {
-                if (pioche.pickCard(i).Force > forceMax) forceMax = pioche.pickCard(i).Force ;
+                if (pioche.getCard(i).Force > forceMax) forceMax = pioche.getCard(i).Force ;
             }
             return forceMax;
         }

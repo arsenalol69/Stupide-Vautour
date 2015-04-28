@@ -60,6 +60,11 @@ namespace Stupide_Vautour.game
             return cardStack;
         }
 
+        public Card getCard(int indice)
+        {
+            return cardStack[indice];
+        }
+
         public Card pickCard(int indice)
         {
             Card c = cardStack[indice];
