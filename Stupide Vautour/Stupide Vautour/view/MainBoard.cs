@@ -33,9 +33,10 @@ namespace Stupide_Vautour
         public MainBoard()
         {
             InitializeComponent();
+
             //Ajout des joueurs
             players = new List<Player>();
-            players.Add(new Human());
+            //players.Add(new Human());
             players.Add(new VerySmart());
             players.Add(new Stupid());
             //players.Add(new Human());
@@ -56,8 +57,10 @@ namespace Stupide_Vautour
             labelScore.Add(labelScore3);
             labelScore.Add(labelScore4);
             piocheAnimal = new Stack(false);
+
             //Création du board
             board = new Board(players, piocheAnimal);
+
             //Carte de jeu
             panelChoice = new List<PictureBox>();
             panelChoice.Add(panelCarteJoue1);
@@ -70,6 +73,8 @@ namespace Stupide_Vautour
                 panelChoice[i].BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
                 panelChoice[i].Size = new System.Drawing.Size(CARD_WIDTH/3, CARD_HEIGHT/3);
             }
+
+            //Carte de la main du joueur
             handCard = new List<PictureBox>();
             handCard.Add(pictureBox1);
             handCard.Add(pictureBox2);
@@ -86,7 +91,7 @@ namespace Stupide_Vautour
             handCard.Add(pictureBox13);
             handCard.Add(pictureBox14);
             handCard.Add(pictureBox15);
-            for (int i = 0; i < Stack.NB_CARD; i++)
+            for (int i = 0; i < Stack.NB_CARD && numHuman!=-1; i++)
             {
                 handCard[i].BackgroundImage = global::Stupide_Vautour.Properties.Resources.carte;
                 handCard[i].BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -94,7 +99,9 @@ namespace Stupide_Vautour
                 handCard[i].Click += new System.EventHandler(this.choiceCard);
                 handCard[i].Tag = i + 1;
             
-        }
+            }
+
+            //Si l'humain ne joue pas, on n'affiche pas les cartes
             if (numHuman == -1)
             {
                 showHandCards(false);
@@ -102,6 +109,11 @@ namespace Stupide_Vautour
 
         }
 
+        /// <summary>
+        /// Est appelé lorsque le joueur clique sur une carte
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void choiceCard(object sender, EventArgs e)
         {
             if (!choiceHuman)
@@ -109,8 +121,19 @@ namespace Stupide_Vautour
 
             choiceHuman = false;
             PictureBox pictureCard = (PictureBox)sender;
+            int choixHumain = (int)pictureCard.Tag;
+            jouerTour(choixHumain);
 
+            
+            choiceHuman = true;
+        }
 
+        /// <summary>
+        /// Permet de jouer le tour
+        /// </summary>
+        /// <param name="choixHumain">Correspond au choix de l'humain. Cette valeur est ignorée si aucun humain ne joue</param>
+        private void jouerTour(int choixHumain)
+        {
             choiceRoundCard = new List<Card>(players.Count);
             List<Player> playersBefore = Board.duplicatePlayers(players);
 
@@ -118,9 +141,9 @@ namespace Stupide_Vautour
             {
                 if (players[i] is Human)
                 {
-                    int choix = (int)pictureCard.Tag;
-                    handCard[choix-1].Hide();
-                    choiceRoundCard.Add(players[i].getHand().pickCard(players[i].getHand().findPositionCard(new Card(Card.PLAYER, choix))));
+
+                    handCard[choixHumain - 1].Hide();
+                    choiceRoundCard.Add(players[i].getHand().pickCard(players[i].getHand().findPositionCard(new Card(Card.PLAYER, choixHumain))));
                 }
                 else
                 {
@@ -144,17 +167,20 @@ namespace Stupide_Vautour
                 panelChoice[i].Image = Image.FromFile("Resources/carte.png");
 
             }
-            if(piocheAnimal.getCards().Count>0)
+            if (piocheAnimal.getCards().Count > 0)
+            {
                 piocher();
-            choiceHuman = true;
+                if (numHuman == -1)
+                    jouerTour(-1);
+            }
+                
         }
 
 
-        private void buttonPlay_Click(object sender, EventArgs e)
-        {
-            
-        }
 
+        /// <summary>
+        /// Mets à jour les scores des joueurs dans la vue
+        /// </summary>
         private void updateViewPlayers()
         {
             for (int i =0 ; i<players.Count; i++)
@@ -164,14 +190,12 @@ namespace Stupide_Vautour
             
         }
 
-        private int getChoice(Player p)
-        {
 
-            HandChoiceForm form = new HandChoiceForm(p);
-            form.ShowDialog();
-            return form.choixCarte;
-        }
-
+        /// <summary>
+        /// Permet de lancer une nouvelle partie
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lancerPartie(object sender, EventArgs e)
         {
             piocheAnimal.initializeStack(false);
@@ -188,13 +212,19 @@ namespace Stupide_Vautour
             }
             piocher();
             board.reset();
-            if( numHuman !=-1)
+            if (numHuman != -1)
                 showHandCards(true);
+            else
+                jouerTour(-1);
 
             choiceHuman = true;
            
         }
-           
+        
+        /// <summary>
+        /// Permet d'afficher ou non la main du joueur Humain
+        /// </summary>
+        /// <param name="show"></param>
         private void showHandCards(bool show)
         {
             for (int i = 0; i < Stack.NB_CARD; i++)
@@ -206,6 +236,10 @@ namespace Stupide_Vautour
             }
         }
 
+
+        /// <summary>
+        /// Permet de piocher une carte animal aléatoirement et l'affiche sur le board
+        /// </summary>
         private void piocher()
         {
             
