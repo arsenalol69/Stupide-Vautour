@@ -33,7 +33,7 @@ namespace Stupide_Vautour
             //Ajout des joueurs
             players = new List<Player>();
             players.Add(new Human());
-            players.Add(new Stupid());
+            players.Add(new VerySmart());
             //players.Add(new Human());
             //players.Add(new Human());
             //Label des scores
@@ -71,9 +71,10 @@ namespace Stupide_Vautour
                 }
                 else
                 {
-                    Turn t = new Turn(players, animalCard, piocheAnimal);
-                     choiceRoundCard.Add(players[i].play(t, board));
-                    
+                    Turn t = new Turn(board.getLastTurn().Players, animalCard, piocheAnimal);
+                    Card choice = players[i].play(t, board);
+                    choiceRoundCard.Add(choice);
+                     players[i].getHand().pickCard(players[i].getHand().findPositionCard(choice));
                 }
             }
             for (int i =0; i<players.Count;i++)

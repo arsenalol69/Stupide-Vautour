@@ -50,6 +50,7 @@
     <Compile Include="game\Stroke.cs" />
     <Compile Include="game\Turn.cs" />
     <Compile Include="players\MediumSmart.cs" />
+    <Compile Include="players\VerySmart.cs" />
     <Compile Include="view\HandChoiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
