@@ -34,7 +34,6 @@
             this.labelScore1 = new System.Windows.Forms.Label();
             this.labelScore3 = new System.Windows.Forms.Label();
             this.labelScore2 = new System.Windows.Forms.Label();
-            this.buttonPlay = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panelCarteJoue1 = new System.Windows.Forms.PictureBox();
             this.panelCarteJoue3 = new System.Windows.Forms.PictureBox();
@@ -108,13 +107,6 @@
             resources.ApplyResources(this.labelScore2, "labelScore2");
             this.labelScore2.BackColor = System.Drawing.Color.Transparent;
             this.labelScore2.Name = "labelScore2";
-            // 
-            // buttonPlay
-            // 
-            resources.ApplyResources(this.buttonPlay, "buttonPlay");
-            this.buttonPlay.Name = "buttonPlay";
-            this.buttonPlay.UseVisualStyleBackColor = true;
-            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
             // 
             // button1
             // 
@@ -267,7 +259,6 @@
             this.Controls.Add(this.labelScore1);
             this.Controls.Add(this.labelScore3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.buttonPlay);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "MainBoard";
@@ -298,7 +289,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonPlay;
         private System.Windows.Forms.Label labelScore4;
         private System.Windows.Forms.Label labelScore1;
         private System.Windows.Forms.Label labelScore3;
