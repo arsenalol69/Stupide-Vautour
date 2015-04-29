@@ -84,6 +84,10 @@ namespace Stupide_Vautour.players
                     p[0] = pCoups+prob[0];
                 }
                 p[1] = prob[1] + pCoups;
+                if (p[1]<0)
+                {
+                    int a =1;
+                }
                 return p;
             
         }
@@ -98,7 +102,7 @@ namespace Stupide_Vautour.players
             double valeurCarte = getValeurCarte(coups);
             double valeurPioche = getValeurCartePioche(coups.AnimalCard, t.Pioche);
             double valeurJoueur = getPositionJoueur(t, coups.Player); //plus le joueur a peu de points, plus son comportement est offensive
-            double proximiteCoups = 1-Math.Abs(valeurCarte - valeurPioche) / valeurPioche; //Plus la var est grande plus le coups est proche de la carte Animal
+            double proximiteCoups = -Math.Abs(valeurCarte - valeurPioche); //Plus la var est grande plus le coups est proche de la carte Animal
             return proximiteCoups*(1-valeurJoueur);
             
         }
@@ -143,7 +147,8 @@ namespace Stupide_Vautour.players
         protected double getValeurCarte(Stroke coup)
         {
             double force = coup.PlayerCard.Force; //Force de la carte
-            int posMain = coup.Player.getHand().findPositionCard(coup.PlayerCard); //Position de la carte dans la main du joueur
+            //refaire la fonction findPositionCard
+            int posMain = coup.Player.getHand().findPositionCard(coup.PlayerCard)+1; //Position de la carte dans la main du joueur
             force = (force * posMain) / coup.Player.getHand().getSize(); //Force recalculée par rapport par rapport à la position
             return force;
         }

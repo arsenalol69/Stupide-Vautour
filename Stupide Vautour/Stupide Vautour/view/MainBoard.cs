@@ -33,7 +33,7 @@ namespace Stupide_Vautour
             //Ajout des joueurs
             players = new List<Player>();
             players.Add(new Human());
-            players.Add(new MediumSmart());
+            players.Add(new Stupid());
             //players.Add(new Human());
             //players.Add(new Human());
             //Label des scores
