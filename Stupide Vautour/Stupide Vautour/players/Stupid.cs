@@ -19,28 +19,36 @@ namespace Stupide_Vautour.players
 
         public override Card play(Turn t, Board board)
         {
-            return bestCard(t, board);
+            return bestCard(t, board,1);
         }
 
-        protected double[] bestCard2(Turn t, Board board, Player p, Card[] playedCard, double[] proba)
+        protected double[] bestCard2(Turn t, Board board, Player p, Card[] playedCard, double[] proba, int nbCard)
         {
             
-            if(playedCard[(numeroPlayer-1)%playedCard.Length]!=null)
+            if(nbCard==playedCard.Length)
             {
-                return calculProbaCoups(playedCard, t, board, proba);
+                
+                double[] resultat = calculProbaCoups(playedCard, t, board, proba);
+                return resultat;
             }
             else
             {
-                
+                 Card[] nouvCombinaison = new Card[playedCard.Length];
+                    for (int j=0; j<nouvCombinaison.Length; j++)
+                    {
+                        nouvCombinaison[j] = playedCard[j];
+                    }
                 for (int i =0; i<p.getHand().getSize(); i++)
                 {
-                    playedCard[p.getNumeroPlayer()]=(p.getHand().getCard(i));
-                    proba = bestCard2(t, board, t.Players[(p.getNumeroPlayer()+1)%t.Players.Count], playedCard, proba);
+                   
+                    nouvCombinaison[p.getNumeroPlayer()]=(p.getHand().getCard(i));
+                    proba = bestCard2(t, board, t.Players[(p.getNumeroPlayer()+1)%t.Players.Count], nouvCombinaison, proba, nbCard+1);
                 }
+
                 return proba;
             }
         }
-        public Card bestCard(Turn t, Board board)
+        public Card bestCard(Turn t, Board board, double volonte)
         {
             double[] probMax = new double[2];
             int indBestCard = 0;
@@ -49,12 +57,14 @@ namespace Stupide_Vautour.players
             for (int i = 0; i < getHand().getSize(); i++)
             {
                 Card[] playerCard = new Card[t.Players.Count];
+                double[] p = new double[2];
                 double[] prob = new double[2];
-                prob[0] = 0; 
-                prob[1] = 0; 
+                p[0] = 0; 
+                p[1] = 0; 
                 playerCard[numeroPlayer] = getHand().getCard(i);
-                double[] p = bestCard2(t, board, this, playerCard,prob);
-                if (prob[1]!=0 && prob[0] / prob[1] > probMax[0] / probMax[1])
+                prob = bestCard2(t, board, t.Players[(numeroPlayer + 1) % t.Players.Count], playerCard, p, 1);
+                double probFinal = prob[0] / prob[1];
+                if (prob[1]!=0 && Math.Abs(probFinal-volonte) < Math.Abs(probMax[0]/probMax[1]-volonte))
                 {
                     probMax[0] = prob[0];
                     probMax[1] = prob[1];
@@ -75,13 +85,13 @@ namespace Stupide_Vautour.players
                 {
                     if (i!=numeroPlayer)
                     {
-                        pCoups *= chanceDetreUtilise(t, new Stroke(t.Players[i], playerCards[i], t.AnimalCarte));
+                        pCoups += chanceDetreUtilise(t, new Stroke(t.Players[i], playerCards[i], t.AnimalCarte));
                     }
                 }
-
-                if (indWinner == numeroPlayer)
+                 p[0] = prob[0];
+                 if ((indWinner == numeroPlayer && t.AnimalCarte.Force > 0) || (indWinner != numeroPlayer && t.AnimalCarte.Force < 0))
                 {
-                    p[0] = pCoups+prob[0];
+                    p[0] += pCoups;
                 }
                 p[1] = prob[1] + pCoups;
                 if (p[1]<0)
@@ -103,18 +113,18 @@ namespace Stupide_Vautour.players
             double valeurPioche = getValeurCartePioche(coups.AnimalCard, t.Pioche);
             double valeurJoueur = getPositionJoueur(t, coups.Player); //plus le joueur a peu de points, plus son comportement est offensive
             double proximiteCoups = -Math.Abs(valeurCarte - valeurPioche); //Plus la var est grande plus le coups est proche de la carte Animal
-            return proximiteCoups*(1-valeurJoueur);
+            return proximiteCoups*(valeurJoueur);
             
         }
 
         protected double getPositionJoueur(Turn t, Player P)
         {
-            int scoreMax = t.Players[0].Score;
-            for (int i =0; i<t.Players.Count; i++)
+            int scoreMax = 0;
+            for (int i = 0; i < t.Players.Count; i++)
             {
-                if (t.Players[i].Score > scoreMax) scoreMax = t.Players[0].Score;
+                if (t.Players[i].Score > scoreMax && i != P.getNumeroPlayer()) scoreMax = t.Players[i].Score;
             }
-            return scoreMax==0 ? 0.001 : P.Score/scoreMax;
+            return scoreMax == 0 ? 1 : 1 + (scoreMax - Score) / scoreMax;
         }
 
         protected bool isFirst(List<Player> pList, Player player)
@@ -147,10 +157,9 @@ namespace Stupide_Vautour.players
         protected double getValeurCarte(Stroke coup)
         {
             double force = coup.PlayerCard.Force; //Force de la carte
-            //refaire la fonction findPositionCard
             int posMain = coup.Player.getHand().findPositionCard(coup.PlayerCard)+1; //Position de la carte dans la main du joueur
             force = (force * posMain) / coup.Player.getHand().getSize(); //Force recalculée par rapport par rapport à la position
-            return force;
+            return force/getForceMax(coup.Player.getHand());
         }
 
         /// <summary>

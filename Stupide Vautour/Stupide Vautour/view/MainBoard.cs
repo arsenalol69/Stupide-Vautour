@@ -36,8 +36,8 @@ namespace Stupide_Vautour
             //Ajout des joueurs
             players = new List<Player>();
             players.Add(new Human());
+            players.Add(new VerySmart());
             players.Add(new Stupid());
-            //players.Add(new Human());
             //players.Add(new Human());
             
             //Recherche de l'humain :
@@ -94,7 +94,7 @@ namespace Stupide_Vautour
                 handCard[i].Click += new System.EventHandler(this.choiceCard);
                 handCard[i].Tag = i + 1;
             
-            }
+        }
             if (numHuman == -1)
             {
                 showHandCards(false);
@@ -120,7 +120,7 @@ namespace Stupide_Vautour
                 {
                     int choix = (int)pictureCard.Tag;
                     handCard[choix-1].Hide();
-                    choiceRoundCard.Add(players[i].getHand().pickCard(choix-1));
+                    choiceRoundCard.Add(players[i].getHand().pickCard(players[i].getHand().findPositionCard(new Card(Card.PLAYER, choix))));
                 }
                 else
                 {
@@ -183,7 +183,7 @@ namespace Stupide_Vautour
             choiceHuman = true;
            
         }
-
+           
         private void showHandCards(bool show)
         {
             for (int i = 0; i < Stack.NB_CARD; i++)
