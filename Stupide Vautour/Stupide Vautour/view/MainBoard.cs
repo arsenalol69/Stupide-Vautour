@@ -138,7 +138,14 @@ namespace Stupide_Vautour
             System.Threading.Thread.Sleep(5000);
             updateViewPlayers();
             piocheAnimal.pickCard(piocheAnimal.findPositionCard(animalCard));
-            piocher();
+            //On enlève les cartes jouées
+            for (int i = 0; i < players.Count; i++)
+            {
+                panelChoice[i].Image = Image.FromFile("Resources/carte.png");
+
+            }
+            if(piocheAnimal.getCards().Count>0)
+                piocher();
             choiceHuman = true;
         }
 
@@ -174,6 +181,11 @@ namespace Stupide_Vautour
                 players[i].Score = 0;
             }
             updateViewPlayers();
+            for (int i = 0; i < players.Count; i++)
+            {
+                panelChoice[i].Image = Image.FromFile("Resources/carte.png");
+
+            }
             piocher();
             buttonPlay.Enabled = true;
             board.reset();
@@ -197,11 +209,7 @@ namespace Stupide_Vautour
 
         private void piocher()
         {
-            for (int i = 0; i < players.Count; i++)
-            {
-               panelChoice[i].Image = Image.FromFile("Resources/carte.png");
-    
-            }
+            
             animalCard = piocheAnimal.getRandomCard();
             panelCardAnimal.Image = Image.FromFile("Resources/cartePioche" + animalCard.Force +".png");
 
