@@ -154,7 +154,7 @@
     <value>Microsoft Sans Serif, 15pt</value>
   </data>
   <data name="labelScore4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>526, 37</value>
+    <value>472, 34</value>
   </data>
   <data name="labelScore4.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 25</value>
@@ -267,35 +267,8 @@
   <data name="&gt;&gt;labelScore2.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
-  <data name="buttonPlay.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonPlay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>778, 42</value>
-  </data>
-  <data name="buttonPlay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="buttonPlay.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="buttonPlay.Text" xml:space="preserve">
-    <value>Jouer le tour</value>
-  </data>
-  <data name="&gt;&gt;buttonPlay.Name" xml:space="preserve">
-    <value>buttonPlay</value>
-  </data>
-  <data name="&gt;&gt;buttonPlay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonPlay.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonPlay.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>767, 12</value>
+    <value>698, 13</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 23</value>
@@ -349,7 +322,7 @@
     <value>NoControl</value>
   </data>
   <data name="panelCarteJoue3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>366, 334</value>
+    <value>365, 309</value>
   </data>
   <data name="panelCarteJoue3.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 140</value>
@@ -403,7 +376,7 @@
     <value>NoControl</value>
   </data>
   <data name="panelCarteJoue4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>366, 148</value>
+    <value>366, 137</value>
   </data>
   <data name="panelCarteJoue4.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 140</value>

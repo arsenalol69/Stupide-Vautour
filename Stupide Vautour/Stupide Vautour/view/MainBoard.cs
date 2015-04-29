@@ -175,7 +175,6 @@ namespace Stupide_Vautour
             }
             updateViewPlayers();
             piocher();
-            buttonPlay.Enabled = true;
             board.reset();
             if( numHuman !=-1)
                 showHandCards(true);
