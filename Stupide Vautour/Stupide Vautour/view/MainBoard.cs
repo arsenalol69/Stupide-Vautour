@@ -26,6 +26,9 @@ namespace Stupide_Vautour
         List<PictureBox> panelChoice;
         const int CARD_HEIGHT = 505;
          const int CARD_WIDTH = 364;
+         int numHuman;
+
+         private List<System.Windows.Forms.PictureBox> handCard;
 
         public MainBoard()
         {
@@ -36,6 +39,16 @@ namespace Stupide_Vautour
             players.Add(new Stupid());
             //players.Add(new Human());
             //players.Add(new Human());
+            
+            //Recherche de l'humain :
+            numHuman = -1;
+            for (int i = 0; i < players.Count; i++)
+            {
+                if (players[i] is Human)
+                    numHuman = i;
+            }
+
+
             //Label des scores
             labelScore = new List<Label>();
             labelScore.Add(labelScore1);
@@ -57,28 +70,68 @@ namespace Stupide_Vautour
                 panelChoice[i].BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
                 panelChoice[i].Size = new System.Drawing.Size(CARD_WIDTH/3, CARD_HEIGHT/3);
             }
+            handCard = new List<PictureBox>();
+            handCard.Add(pictureBox1);
+            handCard.Add(pictureBox2);
+            handCard.Add(pictureBox3);
+            handCard.Add(pictureBox4);
+            handCard.Add(pictureBox5);
+            handCard.Add(pictureBox6);
+            handCard.Add(pictureBox7);
+            handCard.Add(pictureBox8);
+            handCard.Add(pictureBox9);
+            handCard.Add(pictureBox10);
+            handCard.Add(pictureBox11);
+            handCard.Add(pictureBox12);
+            handCard.Add(pictureBox13);
+            handCard.Add(pictureBox14);
+            handCard.Add(pictureBox15);
+            for (int i = 0; i < Stack.NB_CARD; i++)
+            {
+                handCard[i].BackgroundImage = global::Stupide_Vautour.Properties.Resources.carte;
+                handCard[i].BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                handCard[i].Image = Image.FromFile("Resources/carteJoueur"+ (numHuman+1) + (i+1) + ".png");
+                handCard[i].Click += new System.EventHandler(this.choiceCard);
+                handCard[i].Tag = i + 1;
+            
+            }
+            if (numHuman == -1)
+            {
+                showHandCards(false);
+            }
+
         }
 
-        private void buttonPlay_Click(object sender, EventArgs e)
+        void choiceCard(object sender, EventArgs e)
         {
+            if (!choiceHuman)
+                return;
+
+            choiceHuman = false;
+            PictureBox pictureCard = (PictureBox)sender;
+
+
             choiceRoundCard = new List<Card>(players.Count);
-            for (int i=0; i<players.Count; i++)
+            List<Player> playersBefore = Board.duplicatePlayers(players);
+
+            for (int i = 0; i < players.Count; i++)
             {
-                if (players[i] is Human )
+                if (players[i] is Human)
                 {
-                    int choix = getChoice(players[i]);
-                    choiceRoundCard.Add(players[i].getHand().pickCard(choix));
+                    int choix = (int)pictureCard.Tag;
+                    handCard[choix-1].Hide();
+                    choiceRoundCard.Add(players[i].getHand().pickCard(choix-1));
                 }
                 else
                 {
-                    Turn t = new Turn(players, animalCard, piocheAnimal);
-                     choiceRoundCard.Add(players[i].play(t, board));
-                    
+                    Turn t = new Turn(playersBefore, animalCard, piocheAnimal);
+                    choiceRoundCard.Add(players[i].play(t, board));
+
                 }
             }
-            for (int i =0; i<players.Count;i++)
+            for (int i = 0; i < players.Count; i++)
             {
-                panelChoice[i].Image = Image.FromFile("Resources/carteJoueur" + ((int)(i+1)) + choiceRoundCard[i].Force.ToString() + ".png");
+                panelChoice[i].Image = Image.FromFile("Resources/carteJoueur" + ((int)(i + 1)) + choiceRoundCard[i].Force.ToString() + ".png");
             }
             this.Refresh();
             board.play(choiceRoundCard, animalCard);
@@ -86,6 +139,13 @@ namespace Stupide_Vautour
             updateViewPlayers();
             piocheAnimal.pickCard(piocheAnimal.findPositionCard(animalCard));
             piocher();
+            choiceHuman = true;
+        }
+
+
+        private void buttonPlay_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void updateViewPlayers()
@@ -117,7 +177,22 @@ namespace Stupide_Vautour
             piocher();
             buttonPlay.Enabled = true;
             board.reset();
+            if( numHuman !=-1)
+                showHandCards(true);
+
+            choiceHuman = true;
            
+        }
+
+        private void showHandCards(bool show)
+        {
+            for (int i = 0; i < Stack.NB_CARD; i++)
+            {
+                if (show)
+                    handCard[i].Show();
+                else
+                    handCard[i].Hide();
+            }
         }
 
         private void piocher()
@@ -132,5 +207,12 @@ namespace Stupide_Vautour
 
         }
 
+        private void labelScore4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        public bool choiceHuman { get; set; }
     }
 }

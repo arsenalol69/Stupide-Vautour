@@ -41,6 +41,15 @@ namespace Stupide_Vautour.game
 
         }
 
+        static public List<Player> duplicatePlayers(List<Player> players)
+        {
+            List<Player> newList = new List<Player>();
+            foreach (Player p in players)
+                newList.Add(p.duplicate());
+            return newList;
+
+        }
+
         /// <summary>
         /// Retourne le gagnant pour les cartes jouées données en paramètre 
         /// </summary>

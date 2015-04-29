@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Stupide_Vautour.players
 {
-    abstract public class Player
+    public class Player : ICloneable
     {
         protected static int lastNumeroPlayer = 0;
         protected int score = 0;
@@ -23,6 +23,15 @@ namespace Stupide_Vautour.players
             
         }
 
+        public Player(Player p)
+        {
+            
+        score = p.score;
+        numeroPlayer = p.numeroPlayer;
+        myCards = new Stack(p.myCards);
+         
+        }
+
 
         public int Score
         {
@@ -33,7 +42,7 @@ namespace Stupide_Vautour.players
         public void addScore(int scoreToAdd){
             score += scoreToAdd;
         }
-        public abstract Card play(Turn lastTurn, Board board);
+        public virtual Card play(Turn lastTurn, Board board) { return null; }
 
         public Stack getHand()
         {
@@ -43,6 +52,16 @@ namespace Stupide_Vautour.players
         public int getNumeroPlayer()
         {
             return numeroPlayer;
+        }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
+
+        internal Player duplicate()
+        {
+           return new Player(this);
         }
     }
 }
