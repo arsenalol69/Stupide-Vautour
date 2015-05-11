@@ -36,8 +36,8 @@ namespace Stupide_Vautour
 
             //Ajout des joueurs
             players = new List<Player>();
-            //players.Add(new Human());
-            players.Add(new VerySmart());
+            players.Add(new Human());
+            //players.Add(new VerySmart());
             players.Add(new Stupid());
             //players.Add(new Human());
             
@@ -149,7 +149,7 @@ namespace Stupide_Vautour
                 {
                     Turn t = new Turn(playersBefore, animalCard, piocheAnimal);
                     choiceRoundCard.Add(players[i].play(t, board));
-
+                    players[i].getHand().pickCard(players[i].getHand().findPositionCard(choiceRoundCard.Last()));
                 }
             }
             for (int i = 0; i < players.Count; i++)
@@ -158,7 +158,7 @@ namespace Stupide_Vautour
             }
             this.Refresh();
             board.play(choiceRoundCard, animalCard);
-            System.Threading.Thread.Sleep(5000);
+            System.Threading.Thread.Sleep(500);
             updateViewPlayers();
             piocheAnimal.pickCard(piocheAnimal.findPositionCard(animalCard));
             //On enlève les cartes jouées
