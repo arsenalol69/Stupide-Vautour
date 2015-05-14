@@ -38,7 +38,7 @@ namespace Stupide_Vautour
             players = new List<Player>();
             players.Add(new Human());
             //players.Add(new VerySmart());
-            players.Add(new Stupid());
+            players.Add(new MediumSmart());
             //players.Add(new Human());
             
             //Recherche de l'humain :
@@ -149,7 +149,10 @@ namespace Stupide_Vautour
                 {
                     Turn t = new Turn(playersBefore, animalCard, piocheAnimal);
                     choiceRoundCard.Add(players[i].play(t, board));
-                    players[i].getHand().pickCard(players[i].getHand().findPositionCard(choiceRoundCard.Last()));
+                    if (!(players[i] is MediumSmart))
+                    {
+                        players[i].getHand().pickCard(players[i].getHand().findPositionCard(choiceRoundCard.Last()));
+                    }
                 }
             }
             for (int i = 0; i < players.Count; i++)
