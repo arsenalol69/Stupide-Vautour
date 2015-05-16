@@ -23,6 +23,11 @@ namespace Stupide_Vautour.game
             reset();
         }
 
+        /// <summary>
+        /// Permet de jouer les cartes posées par le joueur et ajoute les points au gagnant
+        /// </summary>
+        /// <param name="cardsPlayed">la liste des cartes jouées</param>
+        /// <param name="animal">la carte animal</param>
         public void play(List<Card> cardsPlayed, Card animal)
         {
 
@@ -41,6 +46,11 @@ namespace Stupide_Vautour.game
 
         }
 
+        /// <summary>
+        /// Permet de duplicater la liste de joueur et leur main respectives
+        /// </summary>
+        /// <param name="players"></param>
+        /// <returns></returns>
         static public List<Player> duplicatePlayers(List<Player> players)
         {
             List<Player> newList = new List<Player>();
@@ -90,6 +100,7 @@ namespace Stupide_Vautour.game
 
             return winner;
         }
+
 
 
         private int minCard(List<Card> cards){
@@ -187,6 +198,10 @@ namespace Stupide_Vautour.game
                 cancelCards(cards, val);
         }
 
+        /// <summary>
+        /// Retourne le dernier tour joué
+        /// </summary>
+        /// <returns></returns>
         public Turn getLastTurn()
         {
             try
@@ -202,7 +217,9 @@ namespace Stupide_Vautour.game
         }
 
 
-
+        /// <summary>
+        /// Permet de réinitialier le board en supprimant l'historique.
+        /// </summary>
         public void reset()
         {
             history.Clear();

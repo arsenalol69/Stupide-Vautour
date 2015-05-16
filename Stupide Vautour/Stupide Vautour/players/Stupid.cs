@@ -27,7 +27,11 @@ namespace Stupide_Vautour.players
         /// <returns></returns>
         public override Card play(Turn t, Board board)
         {
-            return bestCard(t, board,1);
+            //return bestCard(t, board,1);
+            Random rnd = new Random();
+            int indCard = rnd.Next(myCards.getSize() - 3, myCards.getSize());
+            indCard = indCard < 0 ? 0 : indCard;
+            return myCards.getCard(indCard);
         }
 
         /// <summary>
