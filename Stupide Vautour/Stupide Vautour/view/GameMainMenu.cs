@@ -100,6 +100,7 @@ namespace Stupide_Vautour.view
 
             }
             Console.WriteLine("" + players.Count);
+            Player.lastNumeroPlayer = 0;
             MainBoard mainBoard = new MainBoard(players);
             mainBoard.ShowDialog();
 

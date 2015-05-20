@@ -44,6 +44,10 @@ namespace Stupide_Vautour
         public MainBoard(List <Player> players)
         {
             InitializeComponent();
+            Invalidate();
+            Update();
+            Refresh();
+            Application.DoEvents();
 
             this.ControlBox = false;
             this.Text = String.Empty;
@@ -116,9 +120,22 @@ namespace Stupide_Vautour
                 showHandCards(false);
             }
 
-            lancerPartie(pictureBox16, null);
+            //on lance la partie dans 1 sec :
+            System.Windows.Forms.Timer MyTimer = new System.Windows.Forms.Timer();
+            MyTimer.Interval = 1000;
+            MyTimer.Tick += new EventHandler(OnTimedEvent);
+            MyTimer.Start();
+            
 
         }
+
+        private void OnTimedEvent(object sender, EventArgs e)
+        {
+            ((System.Windows.Forms.Timer)sender).Stop();
+            lancerPartie(pictureBox16, null);
+            
+        }
+
 
         /// <summary>
         /// Est appelé lorsque le joueur clique sur une carte
@@ -201,7 +218,7 @@ namespace Stupide_Vautour
             {
                 labelScore[i].Text = players[i].Score.ToString();
             }
-            
+
         }
 
 

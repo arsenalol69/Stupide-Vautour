@@ -9,7 +9,7 @@ namespace Stupide_Vautour.players
 {
     public class Player : ICloneable
     {
-        protected static int lastNumeroPlayer = 0;
+        public static int lastNumeroPlayer = 0;
         protected int score = 0;
         protected int numeroPlayer;
         protected Stack myCards;
