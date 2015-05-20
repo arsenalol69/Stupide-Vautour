@@ -12,11 +12,22 @@ using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Stupide_Vautour
 {
     public partial class MainBoard : Form
     {
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd,
+                         int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+
         Board board;
         List<Player> players;
         Stack piocheAnimal;
@@ -33,6 +44,9 @@ namespace Stupide_Vautour
         public MainBoard(List <Player> players)
         {
             InitializeComponent();
+
+            this.ControlBox = false;
+            this.Text = String.Empty;
 
             this.players = players;
             
@@ -101,6 +115,8 @@ namespace Stupide_Vautour
             {
                 showHandCards(false);
             }
+
+            lancerPartie(pictureBox16, null);
 
         }
 
@@ -246,12 +262,23 @@ namespace Stupide_Vautour
 
         }
 
-        private void labelScore4_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
 
         public bool choiceHuman { get; set; }
+
+        private void onClickExit(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void Form1_MouseDown(object sender,
+            System.Windows.Forms.MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
     }
 }

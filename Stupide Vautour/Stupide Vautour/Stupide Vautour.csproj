@@ -112,6 +112,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\btn_exit.png" />
+    <Content Include="Resources\btn_start.png" />
     <Content Include="Resources\mainmenu.png" />
     <None Include="Resources\boardgame.png" />
     <Content Include="Resources\carte.png">

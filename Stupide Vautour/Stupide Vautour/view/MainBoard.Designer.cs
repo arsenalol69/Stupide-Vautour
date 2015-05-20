@@ -34,7 +34,6 @@
             this.labelScore1 = new System.Windows.Forms.Label();
             this.labelScore3 = new System.Windows.Forms.Label();
             this.labelScore2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelCarteJoue1 = new System.Windows.Forms.PictureBox();
             this.panelCarteJoue3 = new System.Windows.Forms.PictureBox();
             this.panelCarteJoue2 = new System.Windows.Forms.PictureBox();
@@ -54,6 +53,8 @@
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.panelCardAnimal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelCarteJoue1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelCarteJoue3)).BeginInit();
@@ -74,6 +75,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCardAnimal
@@ -88,7 +91,6 @@
             resources.ApplyResources(this.labelScore4, "labelScore4");
             this.labelScore4.BackColor = System.Drawing.Color.Transparent;
             this.labelScore4.Name = "labelScore4";
-            this.labelScore4.Click += new System.EventHandler(this.labelScore4_Click);
             // 
             // labelScore1
             // 
@@ -107,13 +109,6 @@
             resources.ApplyResources(this.labelScore2, "labelScore2");
             this.labelScore2.BackColor = System.Drawing.Color.Transparent;
             this.labelScore2.Name = "labelScore2";
-            // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.lancerPartie);
             // 
             // panelCarteJoue1
             // 
@@ -229,11 +224,30 @@
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.TabStop = false;
             // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox16.Cursor = System.Windows.Forms.Cursors.Default;
+            resources.ApplyResources(this.pictureBox16, "pictureBox16");
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.TabStop = false;
+            this.pictureBox16.Click += new System.EventHandler(this.lancerPartie);
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pictureBox17, "pictureBox17");
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.TabStop = false;
+            this.pictureBox17.Click += new System.EventHandler(this.onClickExit);
+            // 
             // MainBoard
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Stupide_Vautour.Properties.Resources.boardgame;
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.pictureBox13);
@@ -258,10 +272,10 @@
             this.Controls.Add(this.labelScore4);
             this.Controls.Add(this.labelScore1);
             this.Controls.Add(this.labelScore3);
-            this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "MainBoard";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.panelCardAnimal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelCarteJoue1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelCarteJoue3)).EndInit();
@@ -282,6 +296,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,7 +309,6 @@
         private System.Windows.Forms.Label labelScore1;
         private System.Windows.Forms.Label labelScore3;
         private System.Windows.Forms.Label labelScore2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox panelCardAnimal;
         private System.Windows.Forms.PictureBox panelCarteJoue1;
         private System.Windows.Forms.PictureBox panelCarteJoue3;
@@ -314,6 +329,8 @@
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.PictureBox pictureBox17;
     }
 }
 

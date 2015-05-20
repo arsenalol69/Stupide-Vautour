@@ -34,6 +34,8 @@ namespace Stupide_Vautour.view
         {
             InitializeComponent();
 
+            CenterToScreen();
+
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 
             BackColor = Color.White;
