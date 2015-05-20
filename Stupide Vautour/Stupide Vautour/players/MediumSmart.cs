@@ -18,7 +18,7 @@ namespace Stupide_Vautour.players
         {
 
                 double valeurPioche = getValeurCartePioche(lastTurn.AnimalCarte, lastTurn.Pioche);
-                int indIdealCard = (int)(lastTurn.Pioche.getSize() * valeurPioche);
+                int indIdealCard = (int)(myCards.getSize() * valeurPioche);
                 int indCardToPlay = getRandomGaussian(indIdealCard);
                 if (myCards.getSize() <= indCardToPlay)
                 {
