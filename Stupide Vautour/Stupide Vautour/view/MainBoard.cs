@@ -30,16 +30,11 @@ namespace Stupide_Vautour
 
          private List<System.Windows.Forms.PictureBox> handCard;
 
-        public MainBoard()
+        public MainBoard(List <Player> players)
         {
             InitializeComponent();
 
-            //Ajout des joueurs
-            players = new List<Player>();
-            players.Add(new Human());
-            //players.Add(new VerySmart());
-            players.Add(new MediumSmart());
-            //players.Add(new Human());
+            this.players = players;
             
             //Recherche de l'humain :
             numHuman = -1;
@@ -161,7 +156,7 @@ namespace Stupide_Vautour
             }
             this.Refresh();
             board.play(choiceRoundCard, animalCard);
-            System.Threading.Thread.Sleep(500);
+            System.Threading.Thread.Sleep(3000);
             updateViewPlayers();
             piocheAnimal.pickCard(piocheAnimal.findPositionCard(animalCard));
             //On enlève les cartes jouées

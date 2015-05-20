@@ -1,5 +1,6 @@
 ﻿using Stupide_Vautour.game;
 using Stupide_Vautour.players;
+using Stupide_Vautour.view;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace Stupide_Vautour
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new MainBoard());
+            Application.Run(new GameMainMenu());
             //Player p1 = new Stupid();
             //Card c = p1.play(new Card(Card.ANIMAL, 5));
             //Console.WriteLine("hello");

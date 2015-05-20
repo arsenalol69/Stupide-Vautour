@@ -71,6 +71,12 @@
     <Compile Include="players\Stupid.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\GameMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\GameMainMenu.Designer.cs">
+      <DependentUpon>GameMainMenu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="view\HandChoiceForm.resx">
       <DependentUpon>HandChoiceForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +93,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="view\GameMainMenu.resx">
+      <DependentUpon>GameMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Resources\cardMaker.docx" />
     <None Include="Resources\cartePiocheMaker.psd" />
     <None Include="Properties\Settings.settings">
@@ -103,6 +112,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\mainmenu.png" />
     <None Include="Resources\boardgame.png" />
     <Content Include="Resources\carte.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
