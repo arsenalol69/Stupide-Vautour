@@ -20,7 +20,9 @@ namespace Stupide_Vautour.players
             double valeurPioche = getValeurCartePioche(t.AnimalCarte, t.Pioche);
             double valeurJoueur = getPositionJoueur(t, this);
             p = valeurJoueur * valeurPioche;
-            Console.Write("Valeur volonté : " + p);
+            Console.WriteLine("Valeur pioche : " + valeurPioche);
+            Console.WriteLine("Valeur Joueur : " + valeurJoueur);
+            Console.WriteLine("Volonté : " + p);
             return bestCard(t, board, p);
                     
         }

@@ -97,6 +97,7 @@ namespace Stupide_Vautour.players
                 //On test toutes les combinaisons possibles avec cette carte
                 prob = testerCombinaison(t, board, t.Players[(numeroPlayer + 1) % t.Players.Count], playerCard, p, 1);
                 double probFinal = prob[0] / prob[1];
+                Console.WriteLine("Probabilité de gagner le coup avec force "+playerCard[numeroPlayer].Force + "= "+ probFinal + "=" + prob[0] +"/"+prob[1]);
                 //On vérifie que la proba finale est la plus proche de la volonté
                 if (prob[1]!=0 && Math.Abs(probFinal-volonte) < Math.Abs(probMax[0]/probMax[1]-volonte))
                 {
@@ -156,7 +157,7 @@ namespace Stupide_Vautour.players
             double valeurCarte = getValeurCarte(coups);
             double valeurPioche = getValeurCartePioche(coups.AnimalCard, t.Pioche);
             double valeurJoueur = getPositionJoueur(t, coups.Player); //plus le joueur a peu de points, plus son comportement est offensive
-            double proximiteCoups = -Math.Abs(valeurCarte - valeurPioche); //Plus la var est grande plus le coups est proche de la carte Animal
+            double proximiteCoups = 1-Math.Abs(valeurCarte - valeurPioche)/(valeurCarte>valeurPioche? valeurCarte : valeurPioche); //Plus la var est grande plus le coups est proche de la carte Animal
             return proximiteCoups*(valeurJoueur);
             
         }
@@ -170,7 +171,7 @@ namespace Stupide_Vautour.players
         /// <returns></returns>
         protected double getPositionJoueur(Turn t, Player P)
         {
-            int scoreMax = 0;
+            double scoreMax = 0;
             for (int i = 0; i < t.Players.Count; i++)
             {
                 if (t.Players[i].Score > scoreMax && i != P.getNumeroPlayer()) scoreMax = t.Players[i].Score;
